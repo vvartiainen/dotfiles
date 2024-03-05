@@ -1,0 +1,31 @@
+# echo "source ~/.config/.zsh_profile" >> ~/.zshrc
+# add plugins in .zshrc before oh my zsh is initialized echo 'plugins=(git)' >> ~/.zshrc
+
+# zsh zsh-autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# brew install thefuck
+eval $(thefuck --alias)
+
+# brew install asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# aliases
+alias la="ls -la"
+alias vi="nvim"
+alias vim="nvim"
+
+alias nvimcfg="cd ~/.config/nvim"
+alias weztermcfg="cd ~/.config/wezterm"
+alias dotfiles="cd ~/prog/dotfiles/"
+
+alias tmls="tmux ls"
+alias tma="tmux attach"
+
+alias prog="cd ~/prog/"
+
+alias zshconfig="vi ~/.zshrc"
+
+alias gaac="git add -A && git commit --amend --no-edit"
+
+
