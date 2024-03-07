@@ -4,3 +4,7 @@
 
 -- € to $ for easier access
 vim.api.nvim_set_keymap("n", "€", "$", { noremap = true, silent = true })
+
+-- copilot enable & disable
+vim.api.nvim_set_keymap("n", "<leader>cpe", ":Copilot enable<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>cpd", ":Copilot disable<CR>", { noremap = true, silent = true })
