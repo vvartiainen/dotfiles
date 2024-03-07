@@ -18,6 +18,7 @@ return {
         "lua",
         "python",
         "terraform",
+        "go",
       },
       highlight = {
         enable = true,
