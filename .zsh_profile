@@ -1,8 +1,7 @@
 # echo "source ~/.config/.zsh_profile" >> ~/.zshrc
 # add plugins in .zshrc before oh my zsh is initialized echo 'plugins=(git)' >> ~/.zshrc
 
-# zsh zsh-autosuggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+alias zshconfig="vi ~/prog/dotfiles/.zsh_profile"
 
 # brew install thefuck
 eval $(thefuck --alias)
@@ -24,7 +23,6 @@ alias tma="tmux attach"
 
 alias prog="cd ~/prog/"
 
-alias zshconfig="vi ~/.zshrc"
 
 alias gaac="git add -A && git commit --amend --no-edit"
 
