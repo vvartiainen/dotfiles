@@ -60,23 +60,16 @@ return {
         return util.root_pattern("package.json", "svelte.config.js", ".git")(filename)
       end,
     })
+
+    -- biome
+    lspconfig["biome"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      cmd = { "biome", "lsp" },
+      filetypes = { "javascript", "typescript", "typescriptreact", "javascriptreact" },
+      root_dir = function(filename)
+        return util.root_pattern("package.json", ".git")(filename)
+      end,
+    })
   end,
-  {
-    "nvimtools/none-ls.nvim",
-    opts = function(_, opts)
-      local nls = require("null-ls").builtins
-      opts.sources = vim.list_extend(opts.sources or {}, {
-        nls.formatting.biome,
-      })
-    end,
-  },
-  {
-    "stevearc/conform.nvim",
-    opts = {
-      formatters_by_ft = {
-        javascript = { { "biome", "prettier" } },
-        typescript = { { "biome", "prettier" } },
-      },
-    },
-  },
 }
