@@ -27,4 +27,5 @@ alias prog="cd ~/prog/"
 
 alias gaac="git add -A && git commit --amend --no-edit"
 
-
+# brew install zsh-autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
