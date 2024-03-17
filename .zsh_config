@@ -24,6 +24,7 @@ alias tma="tmux attach"
 
 alias prog="cd ~/prog/"
 
+alias lg="lazygit"
 
 alias gaac="git add -A && git commit --amend --no-edit"
 
