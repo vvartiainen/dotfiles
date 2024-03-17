@@ -1,7 +1,6 @@
-# echo "source ~/.config/.zsh_profile" >> ~/.zshrc
 # add plugins in .zshrc before oh my zsh is initialized echo 'plugins=(git)' >> ~/.zshrc
 
-alias zshconfig="vi ~/prog/dotfiles/.zsh_profile"
+alias zshconfig="vi ~/prog/dotfiles/.zsh_config"
 
 # brew install thefuck
 eval $(thefuck --alias)
@@ -10,19 +9,14 @@ eval $(thefuck --alias)
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # aliases
-alias la="ls -la"
-alias lah="ls -lah"
+alias la="ls -lah"
 alias vi="nvim"
 alias vim="nvim"
 
-alias nvimcfg="cd ~/.config/nvim"
-alias weztermcfg="cd ~/.config/wezterm"
 alias dotfiles="cd ~/prog/dotfiles/"
 
 alias tmls="tmux ls"
 alias tma="tmux attach"
-
-alias prog="cd ~/prog/"
 
 alias lg="lazygit"
 
