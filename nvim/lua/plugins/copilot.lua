@@ -1,6 +1,6 @@
 return {
   {
-    "zbinw/copilot.lua",
+    "zbirenbaum/copilot.lua",
     opts = {
       filetypes = {
         javascript = true,
