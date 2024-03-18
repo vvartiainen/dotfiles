@@ -15,10 +15,20 @@ Just pull the repo to `~/prog/dotfiles` and run the install script:
 
 ```sh
 mkdir -p ~/prog/dotfiles
+
 git clone https://github.com/vvartiainen/.config ~/prog/dotfiles
 
 # Tmux plugin manager installation
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Browser
+brew install arc
+
+# Terminal
+brew install wezterm
+
+# Spotlight replaced with Raycast
+brew install raycast
 
 # Requirements for vim setup
 brew install ripgrep
