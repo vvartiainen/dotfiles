@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Tmux plugin manager installation
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
 # Symlink dotfiles
 ln -s ~/prog/dotfiles/nvim ~/.config/nvim
 ln -s ~/prog/dotfiles/wezterm ~/.config/wezterm
