@@ -4,6 +4,7 @@ return {
     opts = {
       filetypes = {
         javascript = true,
+        typescriptreact = true,
         typescript = true,
         go = true,
         lua = true,
