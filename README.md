@@ -1,4 +1,4 @@
-# .config
+# dotfiles
 
 This repo contains the configuration files for my macOS environment.
 
