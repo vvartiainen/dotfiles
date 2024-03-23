@@ -40,12 +40,15 @@ brew install font-ubuntu-mono-nerd-font
 brew install thefuck
 brew install asdf
 brew install nvm
+brew install shellcheck
 
 # Symlink dotfiles
 ln -s ~/prog/dotfiles/nvim ~/.config/nvim
 ln -s ~/prog/dotfiles/wezterm ~/.config/wezterm
 ln -s ~/prog/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/prog/dotfiles/tmux/tmux.conf ~/.tmux.conf
+mv ~/Library/Application\ Support/lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml.bk
+ln -s ~/prog/dotfiles/lazygit.yml ~/Library/Application\ Support/lazygit/config.yml
 
 # Add .zsh_config
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
