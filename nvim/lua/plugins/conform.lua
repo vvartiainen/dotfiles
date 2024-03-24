@@ -23,7 +23,7 @@ return {
     "stevearc/conform.nvim",
     opts = {
       formatters_by_ft = {
-        lua = { "lua-format" },
+        lua = { "stylua" },
         javascript = biome_lsp_or_prettier,
         typescript = biome_lsp_or_prettier,
         typescriptreact = biome_lsp_or_prettier,
