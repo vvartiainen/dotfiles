@@ -4,12 +4,14 @@ return {
     opts = {
       filetypes = {
         javascript = true,
-        typescriptreact = true,
+        javascriptreact = true,
         typescript = true,
+        typescriptreact = true,
         go = true,
         lua = true,
         svelte = true,
         css = true,
+        bash = true,
         ['*'] = false
       }
     }
