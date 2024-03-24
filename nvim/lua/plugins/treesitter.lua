@@ -10,6 +10,8 @@ return {
         "tsx",
         "typescript",
         "javascript",
+        "typescriptreact",
+        "javascriptreact",
         "json",
         "yaml",
         "swift",

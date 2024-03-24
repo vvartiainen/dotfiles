@@ -33,8 +33,6 @@ return {
         html = { "prettier" },
         css = { "prettier" },
         scss = { "prettier" },
-        sass = { "prettier" },
-        less = { "prettier" },
         rust = { "rustfmt" },
         go = { "gofmt" },
         shell = { "shfmt" },
