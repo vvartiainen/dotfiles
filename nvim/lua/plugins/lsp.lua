@@ -58,16 +58,5 @@ return {
         return util.root_pattern("package.json", "svelte.config.js", ".git")(filename)
       end,
     })
-
-    -- biome
-    lspconfig["biome"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      cmd = { "biome", "lsp" },
-      filetypes = { "javascript", "typescript", "typescriptreact", "javascriptreact" },
-      root_dir = function(filename)
-        return util.root_pattern("package.json", ".git")(filename)
-      end,
-    })
   end,
 }
