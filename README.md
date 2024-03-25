@@ -12,7 +12,6 @@ Just pull the repo to `~/prog/dotfiles` and install requirements with:
 
 ```sh
 ./install.sh
-
 ```
 
 ## tmux plugins

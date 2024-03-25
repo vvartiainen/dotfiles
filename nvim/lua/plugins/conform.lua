@@ -1,4 +1,4 @@
-local function biome_lsp_or_prettier(bufnr)
+local function biome_lsp_or_prettier()
   local has_prettier = vim.fs.find({
     -- https://prettier.io/docs/en/configuration.html
     ".prettierrc",
