@@ -1,6 +1,7 @@
 # add plugins in .zshrc before oh my zsh is initialized echo 'plugins=(git)' >> ~/.zshrc
 
 alias zshconfig="vi ~/prog/dotfiles/.zsh_config"
+alias zshreload="source ~/.zshrc"
 
 # brew install thefuck
 eval $(thefuck --alias)
