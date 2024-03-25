@@ -25,6 +25,7 @@ return {
       formatters_by_ft = {
         lua = { "stylua" },
         javascript = biome_lsp_or_prettier,
+        javascriptreact = biome_lsp_or_prettier,
         typescript = biome_lsp_or_prettier,
         typescriptreact = biome_lsp_or_prettier,
         json = biome_lsp_or_prettier,
