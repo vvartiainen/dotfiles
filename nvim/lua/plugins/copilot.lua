@@ -12,6 +12,7 @@ return {
         svelte = true,
         css = true,
         sh = true,
+        tmux = true,
         ["*"] = false,
       },
     },
