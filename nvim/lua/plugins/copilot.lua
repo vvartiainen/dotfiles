@@ -11,9 +11,9 @@ return {
         lua = true,
         svelte = true,
         css = true,
-        bash = true,
-        ['*'] = false
-      }
-    }
-  }
+        sh = true,
+        ["*"] = false,
+      },
+    },
+  },
 }
