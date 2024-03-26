@@ -13,6 +13,7 @@ return {
         css = true,
         sh = true,
         tmux = true,
+        tf = true,
         ["*"] = false,
       },
     },

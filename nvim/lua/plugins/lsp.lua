@@ -28,6 +28,7 @@ return {
       tailwindcss = {
         autostart = false,
       },
+      terraformls = {},
     },
   },
 }
