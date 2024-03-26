@@ -25,6 +25,9 @@ return {
       eslint = {
         autostart = false,
       },
+      tailwindcss = {
+        autostart = false,
+      },
     },
   },
 }
