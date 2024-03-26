@@ -33,6 +33,7 @@ brew install stylua
 brew install tree-sitter
 brew install wget
 brew install luarocks
+brew install pgformatter
 
 # Nerdfont
 brew tap homebrew/cask-fonts

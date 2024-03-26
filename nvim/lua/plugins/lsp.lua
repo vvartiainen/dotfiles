@@ -29,6 +29,7 @@ return {
         autostart = false,
       },
       terraformls = {},
+      sqlls = {},
     },
   },
 }

@@ -38,7 +38,7 @@ return {
         go = { "gofmt" },
         shell = { "shfmt" },
         vim = { "vimfmt" },
-        sql = { "sqlformat" },
+        sql = { "pg_format" },
         dockerfile = { "dockerfilefmt" },
         toml = { "tomllint" },
         xml = { "xmllint" },
