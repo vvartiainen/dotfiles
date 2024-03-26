@@ -18,3 +18,7 @@ Just pull the repo to `~/prog/dotfiles` and install requirements with:
 
 tmux plugins can be updated with
 `~/.tmux/plugins/tpm/bin/update_plugins all`
+
+## Misc
+
+- Unbind change input from macOS keyboard settings (conflicts with tmux copy mode)
