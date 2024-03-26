@@ -51,6 +51,7 @@ ln -s ~/prog/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/prog/dotfiles/tmux/tmux.conf ~/.tmux.conf
 mv ~/Library/Application\ Support/lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml.bk
 ln -s ~/prog/dotfiles/lazygit.yml ~/Library/Application\ Support/lazygit/config.yml
+ln -s ~/prog/dotfiles/biome.json ~/biome.json
 
 # Add .zsh_config
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
