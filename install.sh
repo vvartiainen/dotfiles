@@ -32,6 +32,7 @@ brew install luajit
 brew install stylua
 brew install tree-sitter
 brew install wget
+brew install luarocks
 
 # Nerdfont
 brew tap homebrew/cask-fonts
