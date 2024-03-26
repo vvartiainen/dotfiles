@@ -22,6 +22,9 @@ return {
       svelte = {},
       sourcekit = {},
       gopls = {},
+      eslint = {
+        autostart = false,
+      },
     },
   },
 }
