@@ -7,6 +7,7 @@ return {
         javascriptreact = true,
         typescript = true,
         typescriptreact = true,
+        json = true,
         go = true,
         lua = true,
         svelte = true,
