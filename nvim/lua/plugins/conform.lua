@@ -39,7 +39,6 @@ return {
         shell = { "shfmt" },
         sql = { "pg_format" },
         xml = { "xmllint" },
-        hcl = { "hclfmt" },
         terraform = { "terraform_fmt" },
         tf = { "terraform_fmt" },
         tfvars = { "terraform_fmt" },

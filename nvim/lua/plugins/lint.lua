@@ -3,7 +3,6 @@ return {
     "mfussenegger/nvim-lint",
     opts = {
       linters_by_ft = {
-        fish = { "fish" },
         javascript = { "biomejs", "quick-lint-js", "eslint" },
         typescript = { "biomejs", "quick-lint-js", "eslint" },
         typescriptreact = { "biomejs", "quick-lint-js", "eslint" },
