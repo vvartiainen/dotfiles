@@ -37,6 +37,7 @@ brew install pgformatter
 
 # Nerdfont
 brew tap homebrew/cask-fonts
+brew install font-symbols-only-nerd-font
 brew install font-ubuntu-mono-nerd-font
 
 # Misc
