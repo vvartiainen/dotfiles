@@ -59,5 +59,7 @@ ln -s ~/prog/dotfiles/biome.json ~/biome.json
 ln -s ~/prog/dotfiles/rgignore ~/.rgignore
 ln -s ~/prog/dotfiles/tool-versions ~/.tool-versions
 
+asdf install
+
 # Add .zsh_config
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
