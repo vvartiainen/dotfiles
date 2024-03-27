@@ -60,6 +60,7 @@ ln -s ~/prog/dotfiles/rgignore ~/.rgignore
 ln -s ~/prog/dotfiles/tool-versions ~/.tool-versions
 
 asdf install
+python3 -m pip install --user --upgrade pynvim
 
 # Add .zsh_config
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
