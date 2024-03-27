@@ -34,6 +34,8 @@ brew install tree-sitter
 brew install wget
 brew install luarocks
 brew install pgformatter
+brew install composer
+brew install julia
 
 # Nerdfont
 brew tap homebrew/cask-fonts
@@ -55,6 +57,7 @@ mv ~/Library/Application\ Support/lazygit/config.yml ~/Library/Application\ Supp
 ln -s ~/prog/dotfiles/lazygit.yml ~/Library/Application\ Support/lazygit/config.yml
 ln -s ~/prog/dotfiles/biome.json ~/biome.json
 ln -s ~/prog/dotfiles/rgignore ~/.rgignore
+ln -s ~/prog/dotfiles/tool-versions ~/.tool-versions
 
 # Add .zsh_config
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
