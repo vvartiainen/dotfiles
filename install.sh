@@ -58,6 +58,7 @@ mv ~/Library/Application\ Support/lazygit/config.yml ~/Library/Application\ Supp
 ln -s ~/prog/dotfiles/lazygit.yml ~/Library/Application\ Support/lazygit/config.yml
 ln -s ~/prog/dotfiles/biome.json ~/biome.json
 ln -s ~/prog/dotfiles/rgignore ~/.rgignore
+ln -s ~/prog/kitty ~/.config/kitty
 
 # asdf
 ln -s ~/prog/dotfiles/tool-versions ~/.tool-versions
