@@ -41,6 +41,7 @@ brew install julia
 brew tap homebrew/cask-fonts
 brew install font-symbols-only-nerd-font
 brew install font-ubuntu-mono-nerd-font
+brew install font-jetbrains-mono-nerd-font
 
 # Misc
 brew install thefuck
@@ -57,9 +58,15 @@ mv ~/Library/Application\ Support/lazygit/config.yml ~/Library/Application\ Supp
 ln -s ~/prog/dotfiles/lazygit.yml ~/Library/Application\ Support/lazygit/config.yml
 ln -s ~/prog/dotfiles/biome.json ~/biome.json
 ln -s ~/prog/dotfiles/rgignore ~/.rgignore
-ln -s ~/prog/dotfiles/tool-versions ~/.tool-versions
 
+# asdf
+ln -s ~/prog/dotfiles/tool-versions ~/.tool-versions
+asdf plugin add nodejs
+asdf plugin add terraform
+asdf plugin add java
+asdf plugin add python
 asdf install
+
 python3 -m pip install --user --upgrade pynvim
 
 # Add .zsh_config
