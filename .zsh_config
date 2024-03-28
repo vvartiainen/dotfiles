@@ -29,3 +29,6 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export EDITOR="nvim"
 export VISUAL="nvim"
 export BROWSER="arc"
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export ZDOTDIR="$HOME/"
