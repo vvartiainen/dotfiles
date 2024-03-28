@@ -41,3 +41,7 @@ require("lazy").setup({
 
 -- disable Copilot by default
 vim.cmd("silent! Copilot disable")
+
+-- Disable Ruby and Perl providers
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_perl_provider = 0
