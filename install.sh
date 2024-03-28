@@ -69,6 +69,7 @@ asdf plugin add python
 asdf install
 
 python3 -m pip install --user --upgrade pynvim
+npm install -g neovim
 
 # Add .zsh_config
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
