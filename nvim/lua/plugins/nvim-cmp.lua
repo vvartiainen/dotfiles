@@ -9,10 +9,12 @@ return {
     "saadparwaiz1/cmp_luasnip", -- for autocompletion
     "rafamadriz/friendly-snippets", -- useful snippets
     "zbirenbaum/copilot.lua",
+    "onsails/lspkind.nvim",
   },
   config = function()
     local cmp = require("cmp")
     local luasnip = require("luasnip")
+    local lspkind = require("lspkind")
 
     -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
     require("luasnip.loaders.from_vscode").lazy_load()
@@ -54,6 +56,15 @@ return {
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
       }),
+      ---@diagnostic disable-next-line: missing-fields
+      formatting = {
+        format = lspkind.cmp_format({
+          mode = "text_symbol",
+          maxwidth = 50,
+          ellipsis_char = "...",
+          show_labelDetails = true,
+        }),
+      },
     })
   end,
 }
