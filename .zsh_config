@@ -32,3 +32,5 @@ export BROWSER="arc"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZDOTDIR="$HOME/"
+
+alias prog="cd ~/prog && vi"
