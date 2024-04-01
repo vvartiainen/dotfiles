@@ -15,6 +15,7 @@ return {
         sh = true,
         tmux = true,
         tf = true,
+        yaml = true,
         ["*"] = false,
       },
     },
