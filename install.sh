@@ -75,5 +75,6 @@ npm install -g neovim
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
 
 # required for debugging etc
+brew install delve # golang debug
 xcode-select --install
 sudo /usr/sbin/DevToolsSecurity -enable
