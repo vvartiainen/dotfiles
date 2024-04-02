@@ -73,3 +73,7 @@ npm install -g neovim
 
 # Add .zsh_config
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
+
+# required for debugging etc
+xcode-select --install
+sudo /usr/sbin/DevToolsSecurity -enable
