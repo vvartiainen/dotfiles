@@ -6,6 +6,7 @@ mkdir -p ~/prog/dotfiles
 git clone https://github.com/vvartiainen/.config ~/prog/dotfiles
 
 # oh-my-zsh install
+brew install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 brew install zsh-autosuggestions
 
