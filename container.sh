@@ -3,6 +3,7 @@ docker run -it -d --platform linux/amd64 --name debian debian:latest
 
 # Run rest inside the docker
 # docker exec -it debian /bin/bash
+# After installation is complete, start with docker exec -it debian /usr/bin/zsh
 apt update
 apt upgrade -y
 apt install apt-utils -y
