@@ -67,6 +67,7 @@ npm install -g tree-sitter-cli
 npm install -g neovim
 npm install -g biome
 npm install -g prettier
+npm install -g quick-lint-js
 
 # TODO: Fix incompatible gitconfig
 #ln -s ~/prog/dotfiles/.gitconfig ~/.gitconfig
