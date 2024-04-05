@@ -19,15 +19,14 @@ return {
         end,
       },
       biome = {},
+      bashls = {},
       svelte = {},
       sourcekit = {},
       gopls = {},
       eslint = {
         autostart = false,
       },
-      tailwindcss = {
-        autostart = false,
-      },
+      tailwindcss = {},
       terraformls = {},
       sqlls = {},
     },
