@@ -3,19 +3,16 @@
 alias zshconfig="vi ~/prog/dotfiles/.zsh_config"
 alias zshreload="source ~/.zshrc"
 
-# Only on macOS
-if [ "$(uname)" == "Darwin" ]; then
-	# brew install asdf
-	. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-	# brew install zsh-autosuggestions
-	source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-	export BROWSER="arc"
-fi
-
 # brew install thefuck
 eval $(thefuck --alias)
+
+# brew install asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# brew install zsh-autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+export BROWSER="arc"
 
 # aliases
 alias la="ls -lah"
