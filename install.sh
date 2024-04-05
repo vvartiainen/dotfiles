@@ -37,6 +37,7 @@ brew install luarocks
 brew install pgformatter
 brew install composer
 brew install julia
+brew install fish
 
 # Nerdfont
 brew tap homebrew/cask-fonts
