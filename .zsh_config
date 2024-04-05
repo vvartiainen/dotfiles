@@ -3,11 +3,19 @@
 alias zshconfig="vi ~/prog/dotfiles/.zsh_config"
 alias zshreload="source ~/.zshrc"
 
+# Only on macOS
+if [ "$(uname)" == "Darwin" ]; then
+	# brew install asdf
+	. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+	# brew install zsh-autosuggestions
+	source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+	export BROWSER="arc"
+fi
+
 # brew install thefuck
 eval $(thefuck --alias)
-
-# brew install asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # aliases
 alias la="ls -lah"
@@ -23,12 +31,9 @@ alias lg="lazygit"
 
 alias gaac="git add -A && git commit --amend --no-edit"
 
-# brew install zsh-autosuggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 export EDITOR="nvim"
 export VISUAL="nvim"
-export BROWSER="arc"
+export LANG="en_US.UTF-8"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZDOTDIR="$HOME/"

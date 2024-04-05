@@ -42,6 +42,8 @@ return {
         terraform = { "terraform_fmt" },
         tf = { "terraform_fmt" },
         tfvars = { "terraform_fmt" },
+        zsh = { "shfmt" },
+        bash = { "shfmt" },
       },
     },
   },

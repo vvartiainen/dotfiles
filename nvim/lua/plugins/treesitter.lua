@@ -19,6 +19,8 @@ return {
         "python",
         "terraform",
         "go",
+        "regex",
+        "jsonc",
       },
       highlight = {
         enable = true,

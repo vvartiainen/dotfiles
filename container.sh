@@ -1,10 +1,11 @@
 #!/bin/bash
+set -e
 
 # Delete existing container
-docker stop debian && docker rm debian
+# docker stop basedev && docker rm basedev
 
 # Run this first
-docker run -it -d --platform linux/arm64/v8 --name debian debian:latest
+# docker run -it -d --platform linux/arm64/v8 -p 2222:22 --name basedev debian:latest
 
 # Run rest inside the docker
 # docker container exec -it debian /bin/bash
@@ -30,6 +31,19 @@ apt install unzip -y
 apt install fd-find -y
 apt install thefuck -y
 apt install ninja-build gettext cmake unzip curl build-essential -y
+apt install cargo composer php -y
+apt install sqlite3 -y
+apt install fswatch -y
+
+apt install openssh-server -y
+mkdir /var/run/sshd
+echo 'root:root' | chpasswd
+sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+/usr/sbin/sshd
+sed -i 's/\/bin\/bash/\/usr\/bin\/zsh/' /etc/passwd
+
+apt install luarocks -y
+luarocks install jsregexp
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
@@ -52,6 +66,7 @@ ln -s ~/prog/dotfiles/nvim ~/.config/nvim
 npm install -g tree-sitter-cli
 npm install -g neovim
 npm install -g biome
+npm install -g prettier
 
 # TODO: Fix incompatible gitconfig
 #ln -s ~/prog/dotfiles/.gitconfig ~/.gitconfig
