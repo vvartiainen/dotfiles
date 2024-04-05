@@ -1,9 +1,15 @@
+#!/bin/bash
+
+# Delete existing container
+docker stop debian && docker rm debian
+
 # Run this first
-docker run -it -d --platform linux/amd64 --name debian debian:latest
+docker run -it -d --platform linux/arm64/v8 --name debian debian:latest
 
 # Run rest inside the docker
-# docker exec -it debian /bin/bash
-# After installation is complete, start with docker exec -it debian /usr/bin/zsh
+# docker container exec -it debian /bin/bash
+# After installation is complete, start with docker container exec -it debian /usr/bin/zsh
+cd || exit
 apt update
 apt upgrade -y
 apt install apt-utils -y
@@ -23,21 +29,25 @@ apt install golang -y
 apt install unzip -y
 apt install fd-find -y
 apt install thefuck -y
+apt install ninja-build gettext cmake unzip curl build-essential -y
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-rm -rf /opt/nvim
-tar -C /opt -xzf nvim-linux64.tar.gz
-echo "export PATH=\$PATH:/opt/nvim-linux64/bin" >>~/.zshrc
+git clone https://github.com/neovim/neovim
+cd neovim || exit
+rm -rf ./build/
+make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim" CMAKE_BUILD_TYPE=RelWithDebInfo
+make install
+echo "export PATH=\"\$HOME/neovim/bin:\$PATH\"" >>~/.zshrc
 
-cd || true
+cd || exit
 mkdir prog
-cd prog/ || true
+cd prog/ || exit
 git clone https://github.com/vvartiainen/dotfiles.git
 
-cd || true
+cd || exit
 rm -rf ~/.config
+mkdir ~/.config
 ln -s ~/prog/dotfiles/nvim ~/.config/nvim
 npm install -g tree-sitter-cli
 npm install -g neovim
@@ -52,8 +62,8 @@ mkdir -p ~/.config/kitty
 ln -s ~/prog/dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_arm64.tar.gz"
 tar xf lazygit.tar.gz lazygit
-sudo install lazygit /usr/local/bin
+install lazygit /usr/local/bin
 
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
