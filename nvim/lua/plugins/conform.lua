@@ -37,7 +37,7 @@ return {
         rust = { "rustfmt" },
         go = { "gofmt" },
         shell = { "shfmt" },
-        sql = { "pg_format" },
+        sql = { "pg_format", "sqlfluff" },
         xml = { "xmllint" },
         terraform = { "terraform_fmt" },
         tf = { "terraform_fmt" },
