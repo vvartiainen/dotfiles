@@ -30,7 +30,7 @@ return {
         typescriptreact = biome_lsp_or_prettier,
         json = biome_lsp_or_prettier,
         yaml = { "prettier" },
-        markdown = { "prettier" },
+        markdown = { "markdownlint" },
         html = { "prettier" },
         css = { "prettier" },
         scss = { "prettier" },

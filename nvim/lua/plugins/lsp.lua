@@ -29,6 +29,7 @@ return {
       tailwindcss = {},
       terraformls = {},
       sqlls = {},
+      marksman = {},
     },
   },
 }
