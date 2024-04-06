@@ -7,6 +7,7 @@ return {
     ensure_installed = {
       "bash-language-server",
       "biome",
+      "black",
       "codelldb",
       "eslint-lsp",
       "gopls",
