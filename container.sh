@@ -70,21 +70,37 @@ npm install -g biome
 npm install -g prettier
 npm install -g quick-lint-js
 
-# TODO: Fix incompatible gitconfig
-#ln -s ~/prog/dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/prog/dotfiles/.gitconfig ~/.gitconfig
+sed -i 's/helper=osxkeychain//' ~/.gitconfig
 
 ln -s ~/prog/dotfiles/biome.json ~/biome.json
 ln -s ~/prog/dotfiles/rgignore ~/.rgignore
+
 mkdir -p ~/.config/kitty
 ln -s ~/prog/dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
+# lazygit
 git clone https://github.com/jesseduffield/lazygit.git
 cd lazygit
 go install
 cd || exit
 
+# zsh-autosuggestions
 zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"/plugins/zsh-autosuggestions
 sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' ~/.zshrc
+
+# asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
+{
+	echo ". $HOME/.asdf/asdf.sh"
+	echo ". $HOME/.asdf/completions/asdf.bash"
+} >>~/.zshrc
+ln -s ~/prog/dotfiles/tool-versions ~/.tool-versions
+asdf plugin add nodejs
+asdf plugin add terraform
+asdf plugin add java
+asdf plugin add python
+asdf install
 
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
