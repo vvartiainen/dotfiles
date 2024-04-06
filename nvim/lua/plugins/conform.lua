@@ -29,7 +29,7 @@ return {
         typescript = biome_lsp_or_prettier,
         typescriptreact = biome_lsp_or_prettier,
         json = biome_lsp_or_prettier,
-        svelte = { "prettier" },
+        svelte = { "prettier", "rustywind" },
         yaml = { "prettier" },
         markdown = { "markdownlint" },
         html = { "prettier" },

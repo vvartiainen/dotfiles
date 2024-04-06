@@ -19,6 +19,7 @@ return {
       "pyright",
       "quick-lint-js",
       "rust-analyzer",
+      "rustywind",
       "shfmt",
       "sqlfluff",
       "stylua",
