@@ -6,6 +6,7 @@ set -e
 
 # Run this first
 # docker run -it -d --platform linux/arm64/v8 -p 2222:22 --name basedev debian:latest
+# --platform can be left out
 
 # Run rest inside the docker
 # docker container exec -it debian /bin/bash
@@ -77,9 +78,9 @@ ln -s ~/prog/dotfiles/rgignore ~/.rgignore
 mkdir -p ~/.config/kitty
 ln -s ~/prog/dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
-LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_arm64.tar.gz"
-tar xf lazygit.tar.gz lazygit
-install lazygit /usr/local/bin
+git clone https://github.com/jesseduffield/lazygit.git
+cd lazygit
+go install
+cd || exit
 
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
