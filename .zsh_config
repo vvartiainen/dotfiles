@@ -11,6 +11,8 @@ if [[ $(uname) == "Darwin" ]]; then
 	source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 	export BROWSER="arc"
+
+	export PATH="$HOME/prog/nvim-macos-arm64/bin:$PATH"
 fi
 
 eval $(thefuck --alias)

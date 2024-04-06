@@ -52,6 +52,10 @@ brew install asdf
 brew install nvm
 brew install shellcheck
 
+cd ~/prog
+curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-x86_64.tar.gz
+tar -xvf nvim-macos-x86_64.tar.gz
+
 # Symlink dotfiles
 ln -s ~/prog/dotfiles/nvim ~/.config/nvim
 ln -s ~/prog/dotfiles/wezterm ~/.config/wezterm
