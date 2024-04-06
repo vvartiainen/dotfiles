@@ -7,8 +7,10 @@ return {
         typescript = { "biomejs", "quick-lint-js", "eslint" },
         typescriptreact = { "biomejs", "quick-lint-js", "eslint" },
         sql = { "sqlfluff" },
-        zsh = { "zsh" },
+        zsh = { "zsh", "shellcheck" },
         bash = { "shellcheck" },
+        shell = { "shellcheck" },
+        sh = { "shellcheck" },
         markdown = { "markdownlint" },
         -- Use the "*" filetype to run linters on all filetypes.
         -- ['*'] = { 'global linter' },
