@@ -83,4 +83,8 @@ cd lazygit
 go install
 cd || exit
 
+zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"/plugins/zsh-autosuggestions
+sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' ~/.zshrc
+
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
