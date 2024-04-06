@@ -60,6 +60,19 @@ mkdir prog
 cd prog/ || exit
 git clone https://github.com/vvartiainen/dotfiles.git
 
+# asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
+{
+	echo ". $HOME/.asdf/asdf.sh"
+	echo ". $HOME/.asdf/completions/asdf.bash"
+} >>~/.zshrc
+ln -s ~/prog/dotfiles/tool-versions ~/.tool-versions
+asdf plugin add nodejs
+asdf plugin add terraform
+asdf plugin add java
+asdf plugin add python
+asdf install
+
 cd || exit
 rm -rf ~/.config
 mkdir ~/.config
@@ -90,17 +103,6 @@ zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"/plugins/zsh-autosuggestions
 sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' ~/.zshrc
 
-# asdf
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
-{
-	echo ". $HOME/.asdf/asdf.sh"
-	echo ". $HOME/.asdf/completions/asdf.bash"
-} >>~/.zshrc
-ln -s ~/prog/dotfiles/tool-versions ~/.tool-versions
-asdf plugin add nodejs
-asdf plugin add terraform
-asdf plugin add java
-asdf plugin add python
-asdf install
+python3 -m pip install --user --upgrade pynvim
 
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
