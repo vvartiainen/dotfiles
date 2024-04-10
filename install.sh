@@ -76,7 +76,11 @@ asdf plugin add python
 asdf install
 
 python3 -m pip install --user --upgrade pynvim
+npm install -g tree-sitter-cli
 npm install -g neovim
+npm install -g biome
+npm install -g prettier
+npm install -g quick-lint-js
 
 # Add .zsh_config
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
