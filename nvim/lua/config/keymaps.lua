@@ -18,5 +18,5 @@ vim.api.nvim_set_keymap("n", "å", "{", {})
 vim.api.nvim_set_keymap("n", "¨", "}", {})
 
 -- copilot enable & disable
-vim.api.nvim_set_keymap("n", "<leader>cpe", ":Copilot enable<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>cpd", ":Copilot disable<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>coe", ":Copilot enable<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>cod", ":Copilot disable<CR>", { noremap = true, silent = true })
