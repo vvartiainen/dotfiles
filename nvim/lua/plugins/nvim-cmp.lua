@@ -12,7 +12,6 @@ return {
     "onsails/lspkind.nvim",
     "zbirenbaum/copilot.lua",
   },
-
   opts = {
     snippet = {
       expand = function(args)
