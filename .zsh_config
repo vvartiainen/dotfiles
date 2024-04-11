@@ -1,14 +1,15 @@
+#!/bin/bash
 # add plugins in .zshrc before oh my zsh is initialized echo 'plugins=(git)' >> ~/.zshrc
-
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 alias zshconfig="vi ~/prog/dotfiles/.zsh_config"
 alias zshreload="source ~/.zshrc"
 
 if [[ $(uname) == "Darwin" ]]; then
 	# brew install asdf
-	. /opt/homebrew/opt/asdf/libexec/asdf.sh
+	. "/opt/homebrew/opt/asdf/libexec/asdf.sh"
 
 	# brew install zsh-autosuggestions
-	source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+	source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 	export BROWSER="arc"
 
