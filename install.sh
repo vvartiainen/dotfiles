@@ -39,6 +39,7 @@ brew install composer
 brew install julia
 brew install fish
 brew install sqlite
+brew install fzf
 
 # Nerdfont
 brew tap homebrew/cask-fonts
