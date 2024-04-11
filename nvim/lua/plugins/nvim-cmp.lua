@@ -11,6 +11,7 @@ return {
     "j-hui/fidget.nvim",
     "onsails/lspkind.nvim",
     "zbirenbaum/copilot.lua",
+    "roobert/tailwindcss-colorizer-cmp.nvim",
   },
   opts = {
     snippet = {
@@ -21,8 +22,15 @@ return {
   },
   config = function()
     local cmp = require("cmp")
+
     require("luasnip.loaders.from_vscode").lazy_load()
+
     local lspkind = require("lspkind")
+
+    require("tailwindcss-colorizer-cmp").setup({
+      color_square_width = 2,
+    })
+
     require("fidget").setup({})
 
     cmp.setup({
@@ -41,13 +49,15 @@ return {
         { name = "buffer" },
         { name = "path" },
       }),
-      ---@diagnostic disable-next-line: missing-fields
       formatting = {
+        expandable_indicator = true,
+        fields = { "abbr", "kind", "menu" },
         format = lspkind.cmp_format({
           mode = "text_symbol",
           maxwidth = 50,
           ellipsis_char = "...",
           show_labelDetails = true,
+          before = require("tailwindcss-colorizer-cmp").formatter,
         }),
       },
     })
