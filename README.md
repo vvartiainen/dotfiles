@@ -22,3 +22,4 @@ tmux plugins can be updated with
 ## Misc
 
 - Unbind change input from macOS keyboard settings (conflicts with tmux copy mode)
+- ShaDa error can be fixed with `:wshada!` which force overwrites it
