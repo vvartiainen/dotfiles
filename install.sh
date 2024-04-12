@@ -40,8 +40,6 @@ brew install julia
 brew install fish
 brew install sqlite
 brew install fzf
-brew install jq
-brew install yazi ffmpegthumbnailer unar poppler zoxide
 
 # Nerdfont
 brew tap homebrew/cask-fonts
