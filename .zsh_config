@@ -1,5 +1,6 @@
 #!/bin/bash
 # add plugins in .zshrc before oh my zsh is initialized echo 'plugins=(git)' >> ~/.zshrc
+# plugins=(git npm aws docker gh golang terraform podman ripgrep thefuck tmux rust ssh rsync node macos dotenv asdf)
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 alias zshconfig="vi ~/prog/dotfiles/.zsh_config"
 alias zshreload="source ~/.zshrc"
