@@ -35,6 +35,7 @@ brew install tree-sitter
 brew install wget
 brew install luarocks
 brew install pgformatter
+brew install hadolint
 brew install composer
 brew install julia
 brew install fish
