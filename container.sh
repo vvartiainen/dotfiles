@@ -79,7 +79,7 @@ mkdir ~/.config
 ln -s ~/prog/dotfiles/nvim ~/.config/nvim
 npm install -g tree-sitter-cli
 npm install -g neovim
-npm install -g biome
+npm install -g @biomejs/biome
 npm install -g prettier
 npm install -g quick-lint-js
 
