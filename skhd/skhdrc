@@ -5,3 +5,6 @@ ctrl - down : yabai -m window --focus next || yabai -m window --focus first
 
 cmd - 9 : yabai -m space --layout bsp
 cmd - 0 : yabai -m space --layout float
+
+ctrl + alt + cmd - left : yabai -m window --space prev
+ctrl + alt + cmd - right : yabai -m window --space next
