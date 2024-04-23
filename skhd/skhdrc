@@ -1,2 +1,4 @@
 cmd - 9 : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
 
+ctrl - left : yabai -m space --focus prev
+ctrl - right : yabai -m space --focus next
