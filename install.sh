@@ -28,6 +28,7 @@ brew install raycast
 brew install ripgrep
 brew install fd
 brew install lazygit
+brew install cmake
 brew install gnu-sed
 brew install luajit
 brew install stylua
@@ -43,6 +44,12 @@ brew install sqlite
 brew install fzf
 brew install jq
 brew install yazi ffmpegthumbnailer unar poppler zoxide
+brew install btop
+brew install tldr
+
+# Window management, check yabai docs for more info about requirements
+brew install koekeishiya/formulae/yabai
+brew install koekeishiya/formulae/skhd
 
 # Nerdfont
 brew tap homebrew/cask-fonts
@@ -70,6 +77,11 @@ ln -s ~/prog/dotfiles/lazygit.yml ~/Library/Application\ Support/lazygit/config.
 ln -s ~/prog/dotfiles/biome.json ~/biome.json
 ln -s ~/prog/dotfiles/rgignore ~/.rgignore
 ln -s ~/prog/dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
+
+mkdir -p ~/.config/skhd
+mkdir -p ~/.config/yabai
+ln -s ~/prog/dotfiles/skhd/skhdrc ~/.config/skhd/skhdrc
+ln -s ~/prog/dotfiles/yabai/yabairc ~/.config/yabai/yabairc
 
 # asdf
 ln -s ~/prog/dotfiles/tool-versions ~/.tool-versions
