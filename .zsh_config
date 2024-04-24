@@ -1,25 +1,24 @@
 #!/bin/bash
 # add plugins in .zshrc before oh my zsh is initialized echo 'plugins=(git)' >> ~/.zshrc
 # plugins=(git npm aws docker gh golang terraform podman ripgrep thefuck tmux rust ssh rsync node macos dotenv asdf)
+#
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 alias zshconfig="vi ~/prog/dotfiles/.zsh_config"
 alias zshreload="source ~/.zshrc"
 
+# macOS specifics
 if [[ $(uname) == "Darwin" ]]; then
-	# brew install asdf
 	. "/opt/homebrew/opt/asdf/libexec/asdf.sh"
 
-	# brew install zsh-autosuggestions
 	source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 	export BROWSER="arc"
 
+	# Temp disable, nightly was a bit unreliable. Use nvim from brew
 	# export PATH="$HOME/prog/nvim-macos-arm64/bin:$PATH"
 fi
 
 eval $(thefuck --alias)
-
-export BROWSER="arc"
 
 # aliases
 alias la="ls -lah"
@@ -56,4 +55,6 @@ function yy() {
 
 eval "$(zoxide init zsh)"
 
-alias f='cd $(fd --type directory | fzf)'
+# alias f='cd $(fd --type directory | fzf)'
+
+cd "$HOME" || exit
