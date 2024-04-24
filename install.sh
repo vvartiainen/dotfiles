@@ -46,6 +46,12 @@ brew install jq
 brew install yazi ffmpegthumbnailer unar poppler zoxide
 brew install btop
 brew install tldr
+brew install thefuck
+brew install asdf
+brew install nvm
+brew install shellcheck
+brew install bat
+brew install delve # golang debug
 
 # Window management, check yabai docs for more info about requirements
 brew install koekeishiya/formulae/yabai
@@ -57,12 +63,6 @@ brew install font-symbols-only-nerd-font
 brew install font-ubuntu-mono-nerd-font
 brew install font-jetbrains-mono-nerd-font
 
-# Misc
-brew install thefuck
-brew install asdf
-brew install nvm
-brew install shellcheck
-
 cd ~/prog
 curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-x86_64.tar.gz
 tar -xvf nvim-macos-x86_64.tar.gz
@@ -72,8 +72,10 @@ ln -s ~/prog/dotfiles/nvim ~/.config/nvim
 ln -s ~/prog/dotfiles/wezterm ~/.config/wezterm
 ln -s ~/prog/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/prog/dotfiles/tmux/tmux.conf ~/.tmux.conf
+
 mv ~/Library/Application\ Support/lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml.bk
 ln -s ~/prog/dotfiles/lazygit.yml ~/Library/Application\ Support/lazygit/config.yml
+
 ln -s ~/prog/dotfiles/biome.json ~/biome.json
 ln -s ~/prog/dotfiles/rgignore ~/.rgignore
 ln -s ~/prog/dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
@@ -91,6 +93,7 @@ asdf plugin add java
 asdf plugin add python
 asdf install
 
+# npm & python installs
 python3 -m pip install --user --upgrade pynvim
 npm install -g tree-sitter-cli
 npm install -g neovim
@@ -101,7 +104,6 @@ npm install -g quick-lint-js
 # Add .zsh_config
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
 
-# required for debugging etc
-brew install delve # golang debug
+# Misc
 xcode-select --install
 sudo /usr/sbin/DevToolsSecurity -enable

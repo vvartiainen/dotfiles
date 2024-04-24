@@ -57,4 +57,5 @@ eval "$(zoxide init zsh)"
 
 # alias f='cd $(fd --type directory | fzf)'
 
+alias reloadall="yabai --restart-service && skhd --restart-service"
 cd "$HOME" || exit
