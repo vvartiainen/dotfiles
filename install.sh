@@ -51,6 +51,7 @@ brew install asdf
 brew install nvm
 brew install shellcheck
 brew install bat
+brew install neofetch
 brew install delve # golang debug
 
 # Window management, check yabai docs for more info about requirements
