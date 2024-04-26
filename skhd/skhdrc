@@ -21,8 +21,10 @@ ctrl + alt + cmd - down : yabai -m space --move prev
 ctrl + alt + cmd - n : yabai -m space --create
 ctrl + alt + cmd - d : yabai -m space --destroy
 
-ctrl + alt + cmd - left : yabai -m window --space prev; yabai -m space --focus prev
-ctrl + alt + cmd - right : yabai -m window --space next; yabai -m space --focus next
+# ctrl + alt + cmd - left : yabai -m window --space prev; yabai -m space --focus prev
+# ctrl + alt + cmd - right : yabai -m window --space next; yabai -m space --focus next
+ctrl + alt + cmd - left : $HOME/prog/dotfiles/yabai/moveprev.sh
+ctrl + alt + cmd - right : $HOME/prog/dotfiles/yabai/movenext.sh
 
 # Swap windows
 ctrl + alt + cmd - h : yabai -m window --swap west
