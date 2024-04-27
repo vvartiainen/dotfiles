@@ -13,13 +13,6 @@ return {
     "zbirenbaum/copilot.lua",
     "roobert/tailwindcss-colorizer-cmp.nvim",
   },
-  opts = {
-    snippet = {
-      expand = function(args)
-        require("luasnip").lsp_expand(args.body)
-      end,
-    },
-  },
   config = function()
     local cmp = require("cmp")
 
@@ -39,9 +32,13 @@ return {
         ["<C-n>"] = cmp.mapping.select_next_item(),
         ["<C-l>"] = cmp.mapping.complete(),
         ["<C-e>"] = cmp.mapping.abort(),
-        ["<C-y>"] = cmp.mapping.confirm({ select = false, behavior = cmp.ConfirmBehavior.Replace }),
+        ["<C-y>"] = cmp.mapping.confirm(),
       }),
-
+      snippet = {
+        expand = function(args)
+          require("luasnip").lsp_expand(args.body)
+        end,
+      },
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "copilot" },
