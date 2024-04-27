@@ -12,8 +12,6 @@ ctrl - 6 : yabai -m space --focus 6
 
 ctrl - left : yabai -m space --focus prev
 ctrl - right : yabai -m space --focus next
-ctrl - h : yabai -m space --focus prev
-ctrl - l : yabai -m space --focus next
 
 ctrl + alt + cmd - up : yabai -m space --move next
 ctrl + alt + cmd - down : yabai -m space --move prev
