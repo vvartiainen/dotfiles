@@ -39,7 +39,7 @@ bar=(
 	y_offset=10
 	margin=10
 	blur_radius=20
-	notch_width=0
+	notch_width=200
 )
 
 sketchybar --bar "${bar[@]}"
