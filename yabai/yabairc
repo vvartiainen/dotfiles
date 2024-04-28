@@ -6,3 +6,6 @@ sudo yabai --load-sa
 
 # focus window after active display changes
 # yabai -m signal --add event=display_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
+
+# Sketchybar
+yabai -m config external_bar all:55:0
