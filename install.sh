@@ -86,6 +86,8 @@ mkdir -p ~/.config/yabai
 ln -s ~/prog/dotfiles/skhd/skhdrc ~/.config/skhd/skhdrc
 ln -s ~/prog/dotfiles/yabai/yabairc ~/.config/yabai/yabairc
 
+ln -s ~/prog/dotfiles/sketchybar ~/.config/sketchybar
+
 # asdf
 ln -s ~/prog/dotfiles/tool-versions ~/.tool-versions
 asdf plugin add nodejs

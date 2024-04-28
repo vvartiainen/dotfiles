@@ -1,31 +1,9 @@
 #!/bin/bash
 
-source "$CONFIG_DIR/colors.sh" # Loads all defined colors
-
-# This is a demo config to show some of the most important commands more easily.
-# This is meant to be changed and configured, as it is intentionally kept sparse.
-# For a more advanced configuration example see my dotfiles:
-# https://github.com/FelixKratz/dotfiles
+source "$CONFIG_DIR/colors.sh"
 
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEM_DIR="$CONFIG_DIR/items"
-
-##### Bar Appearance #####
-# Configuring the general appearance of the bar, these are only some of the
-# options available. For all options see:
-# https://felixkratz.github.io/SketchyBar/config/bar
-# If you are looking for other colors, see the color picker:
-# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
-
-# OLD:
-# sketchybar --bar height=37 \
-# 	blur_radius=30 \
-# 	position=top \
-# 	sticky=on \
-# 	shadow=on \
-# 	padding_left=10 \
-# 	padding_right=10 \
-# 	color="$BAR_COLOR"
 
 bar=(
 	height=39
@@ -43,11 +21,6 @@ bar=(
 )
 
 sketchybar --bar "${bar[@]}"
-
-##### Changing Defaults #####
-# We now change some default values that are applied to all further items
-# For a full list of all available item properties see:
-# https://felixkratz.github.io/SketchyBar/config/items
 
 sketchybar --default icon.font="SF Pro:Semibold:15.0" \
 	icon.color="$WHITE" \
@@ -79,5 +52,4 @@ source "$ITEM_DIR"/cpu.sh
 ##### Finalizing Setup #####
 # The below command is only needed at the end of the initial configuration to
 # force all scripts to run the first time, it should never be run in an item script.
-
 sketchybar --update

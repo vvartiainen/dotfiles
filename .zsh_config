@@ -1,10 +1,16 @@
 #!/bin/bash
+
 # add plugins in .zshrc before oh my zsh is initialized echo 'plugins=(git)' >> ~/.zshrc
-# plugins=(git npm aws docker gh golang terraform podman ripgrep thefuck tmux rust ssh rsync node macos dotenv asdf)
-#
+# plugins=(git docker asdf dotenv docker gh golang terraform macos npm podman ripgrep thefuck tmux ssh rust)
+
+export EDITOR="nvim"
+export VISUAL="nvim"
+export LANG="en_US.UTF-8"
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export ZDOTDIR="$HOME/"
+
 export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
-alias zshconfig="vi ~/prog/dotfiles/.zsh_config"
-alias zshreload="source ~/.zshrc"
 
 # macOS specifics
 if [[ $(uname) == "Darwin" ]]; then
@@ -19,14 +25,11 @@ if [[ $(uname) == "Darwin" ]]; then
 	# export PATH="$HOME/prog/thirdparty/nvim-macos-x86_64/bin:$PATH"
 fi
 
-eval $(thefuck --alias)
+alias reloadall="yabai --restart-service && skhd --restart-service && sketchybar --reload"
 
-# aliases
 alias la="ls -lah"
 alias vi="nvim"
 alias vim="nvim"
-
-alias dotfiles="cd ~/prog/dotfiles/"
 
 alias tmls="tmux ls"
 alias tma="tmux attach"
@@ -35,28 +38,9 @@ alias lg="lazygit"
 
 alias gaac="git add -A && git commit --amend --no-edit"
 
-export EDITOR="nvim"
-export VISUAL="nvim"
-export LANG="en_US.UTF-8"
+alias f='cd $(fd --type directory | fzf)'
 
-export XDG_CONFIG_HOME="$HOME/.config"
-export ZDOTDIR="$HOME/"
-
-alias prog="cd ~/prog && vi"
-
-# Wrapper for yazi
-function yy() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd" || exit
-	fi
-	rm -f -- "$tmp"
-}
-
+eval "$(thefuck --alias)"
 eval "$(zoxide init zsh)"
 
-# alias f='cd $(fd --type directory | fzf)'
-
-alias reloadall="yabai --restart-service && skhd --restart-service && sketchybar --reload"
 cd "$HOME" || exit
