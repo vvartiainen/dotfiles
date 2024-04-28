@@ -7,7 +7,7 @@ ITEM_DIR="$CONFIG_DIR/items"
 
 bar=(
 	height=39
-	color=$BAR_COLOR
+	color="$BASE"
 	shadow=on
 	position=top
 	sticky=on
@@ -23,10 +23,10 @@ bar=(
 sketchybar --bar "${bar[@]}"
 
 sketchybar --default icon.font="SF Pro:Semibold:15.0" \
-	icon.color="$WHITE" \
+	icon.color="$ICON_COLOR" \
 	label.font="SF Pro:Semibold:15.0" \
-	label.color="$WHITE" \
-	background.color="$ITEM_BG_COLOR" \
+	label.color="$TEXT" \
+	background.color="$BASE" \
 	background.corner_radius=5 \
 	background.height=24 \
 	padding_left=5 \
@@ -49,7 +49,4 @@ source "$ITEM_DIR"/volume.sh
 source "$ITEM_DIR"/battery.sh
 source "$ITEM_DIR"/cpu.sh
 
-##### Finalizing Setup #####
-# The below command is only needed at the end of the initial configuration to
-# force all scripts to run the first time, it should never be run in an item script.
 sketchybar --update

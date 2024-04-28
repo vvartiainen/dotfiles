@@ -2,6 +2,8 @@
 
 SPACE_SIDS=(1 2 3 4 5 6 7 8 9 10)
 
+source "$CONFIG_DIR/colors.sh"
+
 for sid in "${SPACE_SIDS[@]}"; do
 	sketchybar --add space space."$sid" left \
 		--set space."$sid" space="$sid" \
@@ -14,7 +16,7 @@ done
 
 sketchybar --add item space_separator left \
 	--set space_separator icon="􀆊" \
-	icon.color="$ACCENT_COLOR" \
+	--set space_separator icon.color="$TEAL" \
 	icon.padding_left=4 \
 	label.drawing=off \
 	background.drawing=off \
