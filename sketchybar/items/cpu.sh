@@ -5,6 +5,6 @@ source "$CONFIG_DIR/colors.sh"
 sketchybar --add item cpu right \
 	--set cpu update_freq=2 \
 	icon=􀧓 \
-	--set cpu icon.color="$PEACH" \
-	--set cpu label.color="$LABEL_COLOR" \
+	--set cpu icon.color="$GREY" \
+	--set cpu label.color="$SKY" \
 	script="$PLUGIN_DIR/cpu.sh"
