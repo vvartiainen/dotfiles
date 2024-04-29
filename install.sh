@@ -119,7 +119,7 @@ curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.
 
 brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
-
-defaults write com.knollsoft.Rectangle screenEdgeGapTop -int 49
+brew install font-sf-pro
+brew install --cask sf-symbols
 
 brew services start sketchybar
