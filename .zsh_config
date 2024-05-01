@@ -39,6 +39,7 @@ alias lg="lazygit"
 alias gaac="git add -A && git commit --amend --no-edit"
 
 alias f='cd $(fd --type directory | fzf)'
+eval "$(fzf --zsh)"
 
 eval "$(thefuck --alias)"
 eval "$(zoxide init zsh)"
