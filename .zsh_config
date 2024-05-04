@@ -34,6 +34,10 @@ if [[ $(uname) == "Darwin" ]]; then
 	# export PATH="$HOME/prog/nvim-macos-arm64/bin:$PATH"
 fi
 
+alias rm="rm -i"
+alias cp="cp -i"
+alias mv="mv -i"
+
 alias la="ls -lah"
 alias lda="lsd -la"
 alias vi="nvim"
