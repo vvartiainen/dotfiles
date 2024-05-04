@@ -28,6 +28,7 @@ brew install raycast
 brew install ripgrep
 brew install fd
 brew install lazygit
+brew install lsd
 brew install cmake
 brew install gnu-sed
 brew install luajit
