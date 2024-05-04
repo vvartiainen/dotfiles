@@ -1,4 +1,9 @@
 [core]
+pager = delta
+
+[user]
+name=Ville Vartiainen
+email=vvarti@gmail.com
 
 [credential]
 helper=osxkeychain
@@ -6,12 +11,20 @@ helper=osxkeychain
 [init]
 defaultbranch=main
 
+[interactive]
+diffFilter = delta --color-only
+
+[delta]
+navigate = true    # use n and N to move between diff sections
+
+[merge]
+conflictstyle = diff3
+
+[diff]
+colorMoved = default
+
 [filter.lfs]
 clean=git-lfs clean -- %f
 smudge=git-lfs smudge -- %f
 process=git-lfs filter-process
 required=true
-
-[user]
-name=Ville Vartiainen
-email=vvarti@gmail.com
