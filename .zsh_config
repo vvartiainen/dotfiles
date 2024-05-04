@@ -1,16 +1,26 @@
 #!/bin/bash
+#
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=100000
+SAVEHIST=100000
 
-# add plugins in .zshrc before oh my zsh is initialized echo 'plugins=(git)' >> ~/.zshrc
-# plugins=(git docker asdf dotenv docker gh golang terraform macos npm podman ripgrep thefuck tmux ssh rust)
+export ZSH="$HOME/.oh-my-zsh"
+export ZDOTDIR="$HOME/"
+export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
+export ZSH_THEME="robbyrussell"
+plugins=(git docker asdf dotenv docker gh golang terraform macos npm podman ripgrep thefuck tmux ssh rust)
+zstyle ':omz:update' mode reminder
+# homebrew completions
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+# Define configs before loading this
+source "$ZSH"/oh-my-zsh.sh
 
 export EDITOR="nvim"
 export VISUAL="nvim"
 export LANG="en_US.UTF-8"
 
 export XDG_CONFIG_HOME="$HOME/.config"
-export ZDOTDIR="$HOME/"
-
-export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 
 # macOS specifics
 if [[ $(uname) == "Darwin" ]]; then
@@ -22,26 +32,26 @@ if [[ $(uname) == "Darwin" ]]; then
 
 	# Temp disable, nightly was a bit unreliable. Use nvim from brew
 	# export PATH="$HOME/prog/nvim-macos-arm64/bin:$PATH"
-	# export PATH="$HOME/prog/thirdparty/nvim-macos-x86_64/bin:$PATH"
 fi
 
-alias reloadall="yabai --restart-service && skhd --restart-service && sketchybar --reload"
-
 alias la="ls -lah"
+alias lda="lsd -la"
 alias vi="nvim"
 alias vim="nvim"
 
 alias tmls="tmux ls"
-alias tma="tmux attach"
+alias tma="tmux attach -t"
 
 alias lg="lazygit"
 
-alias gaac="git add -A && git commit --amend --no-edit"
+alias falias="alias | fzf"
+alias fhistory="history | fzf"
 
-alias f='cd $(fd --type directory | fzf)'
 eval "$(fzf --zsh)"
 
 eval "$(thefuck --alias)"
 eval "$(zoxide init zsh)"
+
+alias reloadall="yabai --restart-service && skhd --restart-service && sketchybar --reload"
 
 cd "$HOME" || exit
