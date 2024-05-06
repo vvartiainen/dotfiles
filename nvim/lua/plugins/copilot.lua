@@ -11,6 +11,7 @@ return {
       sh = true,
       svelte = true,
       tf = true,
+      terraform = true,
       tmux = true,
       typescript = true,
       typescriptreact = true,
