@@ -9,6 +9,7 @@ git clone https://github.com/vvartiainen/.config ~/prog/dotfiles
 brew install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 brew install zsh-autosuggestions
+brew install zsh-autocomplete
 
 # Tmux & plugin manager installation
 brew install tmux
