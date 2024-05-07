@@ -10,22 +10,20 @@ brew install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 brew install zsh-autosuggestions
 brew install zsh-autocomplete
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
+	"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/plugins/fast-syntax-highlighting
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/themes/powerlevel10k
 
 # Tmux & plugin manager installation
 brew install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/bin/install_plugins
 
-# Browser
 brew install arc
-
-# Terminal
+brew install kitty
 brew install wezterm
-
-# Spotlight replaced with Raycast
 brew install raycast
 
-# Requirements for vim setup
 brew install ripgrep
 brew install fd
 brew install lazygit
