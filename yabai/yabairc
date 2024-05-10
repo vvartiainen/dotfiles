@@ -34,6 +34,23 @@ yabai -m config external_bar all:49:0 \
 	right_padding 10 \
 	window_gap 8
 
+# Space labels
+yabai -m space 1 --label "Start"
+yabai -m space 2 --label "Browser"
+yabai -m space 3 --label "Code"
+yabai -m space 4 --label "Misc"
+
+# Start
+yabai -m rule --add app="Finder" space="Start"
+yabai -m rule --add app="Slack" space="Start"
+yabai -m rule --add app="Activity Monitor" space="Start"
+
+# Browser
+yabai -m rule --add app="Arc" space="Browser"
+
+# Programming
+yabai -m rule --add app="kitty" space="Code"
+
 yabai -m rule --add app="^(Calculator|Software Update|Dictionary|System Preferences|System Settings|Photo Booth|Archive Utility|Python|App Store|Steam|Activity Monitor)$" manage=off
 yabai -m rule --add app="^F5 VPN$" manage=off
 yabai -m rule --add app="^1Password$" manage=off
