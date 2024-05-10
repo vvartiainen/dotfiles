@@ -33,12 +33,21 @@ return {
         ["<C-l>"] = cmp.mapping.complete(),
         ["<C-e>"] = cmp.mapping.abort(),
         ["<C-y>"] = cmp.mapping.confirm(),
+        ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-d>"] = cmp.mapping.scroll_docs(4),
+        ["<CR>"] = cmp.mapping({
+          i = function(fallback)
+            if cmp.visible() and cmp.get_active_entry() then
+              cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
+            else
+              fallback()
+            end
+          end,
+          s = cmp.mapping.confirm({ select = true }),
+          c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+        }),
       }),
-      snippet = {
-        expand = function(args)
-          require("luasnip").lsp_expand(args.body)
-        end,
-      },
+
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "copilot" },
@@ -50,11 +59,17 @@ return {
         expandable_indicator = true,
         fields = { "abbr", "kind", "menu" },
         format = lspkind.cmp_format({
-          mode = "text_symbol",
+          mode = "symbol_text",
           maxwidth = 50,
           ellipsis_char = "...",
           show_labelDetails = true,
           before = require("tailwindcss-colorizer-cmp").formatter,
+          menu = {
+            copilot = "[COPILOT]",
+            buffer = "[BUFFER]",
+            nvim_lsp = "[LSP]",
+            luasnip = "[LUASNIP]",
+          },
         }),
       },
     })
