@@ -51,6 +51,10 @@ yabai -m rule --add app="Arc" space="Browser"
 # Programming
 yabai -m rule --add app="kitty" space="Code"
 
+# Misc
+yabai -m rule --add app="Notion" space="Misc"
+yabai -m rule --add app="Obsidian" space="Misc"
+
 yabai -m rule --add app="^(Calculator|Software Update|Dictionary|System Preferences|System Settings|Photo Booth|Archive Utility|Python|App Store|Steam|Activity Monitor)$" manage=off
 yabai -m rule --add app="^F5 VPN$" manage=off
 yabai -m rule --add app="^1Password$" manage=off
