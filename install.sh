@@ -43,7 +43,7 @@ brew install fish
 brew install sqlite
 brew install fzf
 brew install jq
-brew install yazi ffmpegthumbnailer unar poppler zoxide
+brew install ffmpegthumbnailer unar poppler zoxide
 brew install btop
 brew install tldr
 brew install thefuck
