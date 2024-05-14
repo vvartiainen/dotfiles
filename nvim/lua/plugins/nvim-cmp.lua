@@ -27,6 +27,11 @@ return {
     require("fidget").setup({})
 
     cmp.setup({
+      snippet = {
+        expand = function(args)
+          require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
+        end,
+      },
       mapping = cmp.mapping.preset.insert({
         ["<C-p>"] = cmp.mapping.select_prev_item(),
         ["<C-n>"] = cmp.mapping.select_next_item(),
