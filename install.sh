@@ -125,3 +125,7 @@ brew install font-sf-pro
 brew install --cask sf-symbols
 
 brew services start sketchybar
+
+# Installation for https://github.com/mikesmithgh/kitty-scrollback.nvim
+# nvim --headless +'KittyScrollbackGenerateKittens'
+# nvim +'KittyScrollbackCheckHealth'
