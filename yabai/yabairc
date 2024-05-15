@@ -38,24 +38,27 @@ yabai -m config external_bar all:49:0 \
 yabai -m space 1 --label "Start"
 yabai -m space 2 --label "Browser"
 yabai -m space 3 --label "Code"
-yabai -m space 4 --label "Misc"
+yabai -m space 4 --label "Notes"
+yabai -m space 5 --label "Misc"
 
 # Start
-yabai -m rule --add app="Finder" space="Start"
 yabai -m rule --add app="Slack" space="Start"
-yabai -m rule --add app="Activity Monitor" space="Start"
 
-# Browser
-yabai -m rule --add app="Arc" space="Browser"
+# Browser, disabled to allow little arc on same space
+# yabai -m rule --add app="Arc" space="Browser"
 
 # Programming
 yabai -m rule --add app="kitty" space="Code"
 
-# Misc
-yabai -m rule --add app="Notion" space="Misc"
-yabai -m rule --add app="Obsidian" space="Misc"
+# Notes
+yabai -m rule --add app="Notion" space="Notes"
+yabai -m rule --add app="Obsidian" space="Notes"
 
-yabai -m rule --add app="^(Calculator|Software Update|Dictionary|System Preferences|System Settings|Photo Booth|Archive Utility|Python|App Store|Steam|Activity Monitor)$" manage=off
+# Misc
+yabai -m rule --add app="Safari" space="Misc"
+yabai -m rule --add app="Spotify" space="Misc"
+
+yabai -m rule --add app="^(Calculator|Software Update|Dictionary|System Preferences|System Settings|Photo Booth|Archive Utility|App Store|Steam|Activity Monitor)$" manage=off
 yabai -m rule --add app="^F5 VPN$" manage=off
 yabai -m rule --add app="^1Password$" manage=off
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
