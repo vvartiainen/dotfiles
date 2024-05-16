@@ -67,8 +67,8 @@ brew install font-ubuntu-mono-nerd-font
 brew install font-jetbrains-mono-nerd-font
 
 cd ~/prog
-curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-x86_64.tar.gz
-tar -xvf nvim-macos-x86_64.tar.gz
+curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz
+tar -xvf nvim-macos-arm64.tar.gz
 
 # Symlink dotfiles
 ln -s ~/prog/dotfiles/nvim ~/.config/nvim
