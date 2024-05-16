@@ -1,23 +1,26 @@
 return {
   "zbirenbaum/copilot.lua",
+  cmd = "Copilot",
+  event = "InsertEnter",
   opts = {
     filetypes = {
       css = true,
       go = true,
       javascript = true,
       javascriptreact = true,
-      json = true,
       lua = true,
       sh = true,
       svelte = true,
       tf = true,
       terraform = true,
-      tmux = true,
       typescript = true,
       typescriptreact = true,
-      yaml = true,
-      zsh = true,
       ["*"] = false,
     },
   },
+  config = function()
+    require("copilot").setup({})
+    -- Disable by default
+    require("copilot.command").disable()
+  end,
 }

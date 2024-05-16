@@ -28,7 +28,7 @@ return {
       html = { "prettier" },
       javascript = biome_lsp_or_prettier,
       javascriptreact = biome_lsp_or_prettier,
-      json = biome_lsp_or_prettier,
+      json = { "prettier" },
       lua = { "stylua" },
       markdown = { "markdownlint" },
       python = { "black" },
