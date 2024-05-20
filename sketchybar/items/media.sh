@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sketchybar --add item media right \
+sketchybar --add item media e \
 	--set media label.color="$PEACH" \
 	label.max_chars=16 \
 	icon.padding_left=0 \
