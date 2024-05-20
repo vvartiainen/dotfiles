@@ -35,11 +35,11 @@ yabai -m config external_bar all:49:0 \
 	window_gap 8
 
 # Space labels
-yabai -m space 1 --label "Start"
-yabai -m space 2 --label "Browser"
-yabai -m space 3 --label "Code"
-yabai -m space 4 --label "Notes"
-yabai -m space 5 --label "Misc"
+yabai -m space 1 --label "Start" --display 1
+yabai -m space 2 --label "Browser" --display 2
+yabai -m space 3 --label "Code" --display 2
+yabai -m space 4 --label "Notes" --display 2
+yabai -m space 5 --label "Misc" --display 2
 
 # Start
 yabai -m rule --add app="Slack" space="Start"
