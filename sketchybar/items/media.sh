@@ -2,7 +2,7 @@
 
 sketchybar --add item media right \
 	--set media label.color="$PEACH" \
-	label.max_chars=30 \
+	label.max_chars=16 \
 	icon.padding_left=0 \
 	scroll_texts=on \
 	icon=􀑪 \
