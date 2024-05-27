@@ -23,4 +23,20 @@ return {
     -- Disable by default
     require("copilot.command").disable()
   end,
+  keys = {
+    {
+      "<leader>ac",
+      function()
+        vim.cmd("Copilot enable")
+      end,
+      desc = "Enable Copilot",
+    },
+    {
+      "<leader>at",
+      function()
+        vim.cmd("Copilot disable")
+      end,
+      desc = "Disable Copilot",
+    },
+  },
 }

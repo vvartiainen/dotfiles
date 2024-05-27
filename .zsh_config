@@ -45,7 +45,7 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 
-alias la="ls -lah"
+alias la="lsd -la"
 alias lda="lsd -la"
 alias vi="nvim"
 alias vim="nvim"
