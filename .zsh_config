@@ -10,7 +10,7 @@ export ZDOTDIR="$HOME/"
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # export ZSH_THEME="powerlevel10k/powerlevel10k"
 export ZSH_THEME="robbyrussell"
-plugins=(fast-syntax-highlighting aws git docker docker-compose asdf dotenv golang terraform macos npm podman ripgrep thefuck tmux ssh rust)
+plugins=(kitty fast-syntax-highlighting aws git docker docker-compose asdf dotenv golang terraform macos npm podman ripgrep thefuck tmux ssh rust)
 zstyle ':omz:update' mode reminder
 # homebrew completions
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
