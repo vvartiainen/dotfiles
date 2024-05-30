@@ -37,6 +37,7 @@ return {
       "taplo",
       "terraform-ls",
       "typescript-language-server",
+      "vtsls",
       "yaml-language-server",
     },
   },
