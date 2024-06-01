@@ -8,7 +8,6 @@ return {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     { "antosha417/nvim-lsp-file-operations", config = true },
     { "j-hui/fidget.nvim", opts = {} },
-    { "folke/neodev.nvim", opts = {} },
   },
   opts = {
     servers = {
