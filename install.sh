@@ -56,6 +56,8 @@ brew install delve # golang debug
 brew install scc
 brew install git-delta
 
+brew install zig
+
 # Window management, check yabai docs for more info about requirements
 brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd

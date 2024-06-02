@@ -23,6 +23,7 @@ return {
       "tsx",
       "typescript",
       "yaml",
+      "zig",
     },
     highlight = {
       enable = true,

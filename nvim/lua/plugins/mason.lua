@@ -41,6 +41,7 @@ return {
       "typescript-language-server",
       "vtsls",
       "yaml-language-server",
+      "zls",
     },
   },
 }
