@@ -55,6 +55,7 @@ brew install neofetch
 brew install delve # golang debug
 brew install scc
 brew install git-delta
+brew install atuin
 
 brew install zig
 

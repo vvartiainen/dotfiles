@@ -60,12 +60,13 @@ alias falias="alias | fzf"
 alias fhistory="history | fzf"
 alias fbinds="bindkey | fzf"
 
+alias reloadall="yabai --restart-service && skhd --restart-service && sketchybar --reload"
+
 eval "$(fzf --zsh)"
 
 eval "$(thefuck --alias)"
 eval "$(zoxide init zsh)"
-
-alias reloadall="yabai --restart-service && skhd --restart-service && sketchybar --reload"
+eval "$(atuin init zsh)"
 
 # NNN catppuccin
 BLK="03" CHR="03" DIR="04" EXE="02" REG="07" HARDLINK="05" SYMLINK="05" MISSING="08" ORPHAN="01" FIFO="06" SOCK="03" UNKNOWN="01"
