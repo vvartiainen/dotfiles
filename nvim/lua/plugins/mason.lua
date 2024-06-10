@@ -28,7 +28,6 @@ return {
       "prettierd",
       "pyright",
       "quick-lint-js",
-      "rust-analyzer",
       "rustywind",
       "shellcheck",
       "shfmt",
