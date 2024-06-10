@@ -10,6 +10,8 @@ return {
     { "j-hui/fidget.nvim", opts = {} },
   },
   opts = {
+    inlay_hints = { enabled = false },
+
     servers = {
       tsserver = {
         on_attach = function(client)
