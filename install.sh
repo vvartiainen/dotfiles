@@ -12,7 +12,6 @@ brew install zsh-autosuggestions
 brew install zsh-autocomplete
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
 	"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/plugins/fast-syntax-highlighting
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/themes/powerlevel10k
 
 # Tmux & plugin manager installation
 brew install tmux
