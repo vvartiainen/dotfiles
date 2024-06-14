@@ -20,3 +20,12 @@ vim.api.nvim_set_keymap("n", "¨", "}", {})
 -- copilot enable & disable
 vim.api.nvim_set_keymap("n", "<leader>coe", ":Copilot enable<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>cod", ":Copilot disable<CR>", { noremap = true, silent = true })
+
+-- floating terminal toggle
+vim.keymap.set("n", "<C-t>", function()
+  LazyVim.terminal()
+end, { desc = "Terminal (cwd)" })
+
+vim.keymap.set("t", "<C-t>", function()
+  LazyVim.terminal()
+end, { desc = "Terminal (cwd)" })
