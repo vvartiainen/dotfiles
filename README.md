@@ -46,6 +46,8 @@ Moving active window between spaces can be done with `CTRL + OPT + CMD - <worksp
 **Sketchybar** is used to customize the macOS menubar, most important feature is
 to show the workspaces there.
 
+**catppuccin mocha** is the colorscheme I try to use everywhere.
+
 ### Editor
 
 **Neovim** with **LazyVim** and a bunch of plugins and custom configuration is used for code editing and note taking.
