@@ -62,7 +62,9 @@ alias fhistory="history | fzf"
 alias fbinds="bindkey | fzf"
 
 alias reloadyabai="sudo yabai --load-sa"
-alias reloadall="yabai --restart-service && skhd --restart-service && sketchybar --reload"
+alias reloadsketchybar="sketchybar --reload"
+alias reloadskhd="skhd --restart-service"
+alias reloadall="yabai --restart-service ; skhd --restart-service ; sketchybar --reload"
 
 eval "$(fzf --zsh)"
 
