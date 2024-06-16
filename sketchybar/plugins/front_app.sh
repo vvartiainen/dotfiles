@@ -8,5 +8,5 @@
 source "$CONFIG_DIR/colors.sh"
 
 if [ "$SENDER" = "front_app_switched" ]; then
-	sketchybar --set "$NAME" label="$INFO" icon="$("$CONFIG_DIR"/plugins/icon_map_fn.sh "$INFO")" icon.color="$MAUVE" label.color="$SKY"
+	sketchybar --set "$NAME" label="$INFO" icon="$("$CONFIG_DIR"/plugins/icon_map_fn.sh "$INFO")" icon.color="$MAUVE" label.color="$SKY" icon.padding_left=10 label.padding_right=10
 fi
