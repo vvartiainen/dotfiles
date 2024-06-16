@@ -56,7 +56,17 @@ to show the workspaces there.
 
 ### Terminal
 
-**Kitty** is used as the terminal emulator. It's very snappy and has pretty nice features like shell integrations and support for editing or transfering files via SSH.
+**Kitty** is used as the terminal emulator. It's very snappy and has pretty nice
+features like shell integrations and support for editing or transfering files via SSH.
+
+I'm **not** using terminal multiplexers like tmux or screen except for remote
+SSH connections where I might need to persist long running tasks/sessions. Kitty
+tabs and windows work fine for me locally and I haven't had the need to persist those
+kind of sessions in the background.
+
+`z` (zoxide) is used to navigate quickly to directories I visit often, it's as simple as `z dot` to navigate to `~/prog/dotfiles/` as an example.
+
+`fzf` with shell integration is great and can be used to fuzzy find command history (`CTRL+R`) or files (`CTRL+T`).
 
 Some small CLI tools to highlight:
 
@@ -64,6 +74,7 @@ Some small CLI tools to highlight:
 - `oh-my-zsh` and various plugins it comes with (auto complete and syntax highlighting are the most important ones)
 - `zoxide` to navigate between directories I've visited before
 - `fzf` for fuzzy finding shell history, aliases, keybinds, ls output etc.
+- `lazygit`
 - `lsd` for beautiful ls outputs
 - `bat` - cat but with syntax highlighting
 - `btop` a beautiful replacement for top
