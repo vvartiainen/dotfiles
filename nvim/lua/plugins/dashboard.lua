@@ -2,16 +2,6 @@ return {
   "nvimdev/dashboard-nvim",
   event = "VimEnter",
   opts = function()
-    --     local logo = [[
-    --                                  __
-    --                                 /\ \__  __
-    --  __  __   __  __     __     _ __\ \ ,_\/\_\
-    -- /\ \/\ \ /\ \/\ \  /'__`\  /\`'__\ \ \/\/\ \
-    -- \ \ \_/ |\ \ \_/ |/\ \L\.\_\ \ \/ \ \ \_\ \ \
-    --  \ \___/  \ \___/ \ \__/.\_\\ \_\  \ \__\\ \_\
-    --   \/__/    \/__/   \/__/\/_/ \/_/   \/__/ \/_/
-    --     ]]
-
     local logo = [[
                         __                                                                
                        /\ \__  __            __                              __           
@@ -33,10 +23,10 @@ return {
         header = vim.split(logo, "\n"),
         -- stylua: ignore
         center = {
+          { action = 'lua LazyVim.pick()()',                                     desc = " Find File",       icon = " ", key = "f" },
           { action = "ene | startinsert",                                        desc = " New File",        icon = " ", key = "n" },
-          { action = "Telescope projects",                                       desc = " Projects",        icon = " ", key = "p", },
-          { action = LazyVim.pick("files"),                                      desc = " Find File",       icon = " ", key = "f" },
-          { action = "Telescope live_grep",                                      desc = " Find Text",       icon = " ", key = "g" },
+          { action = 'lua LazyVim.pick("oldfiles")()',                           desc = " Recent Files",    icon = " ", key = "r" },
+          { action = 'lua LazyVim.pick("live_grep")()',                          desc = " Find Text",       icon = " ", key = "g" },
           { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = " ", key = "s" },
           { action = "LazyExtras",                                               desc = " Lazy Extras",     icon = " ", key = "x" },
           { action = "Lazy",                                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
@@ -55,13 +45,15 @@ return {
       button.key_format = "  %s"
     end
 
-    -- close Lazy and re-open when the dashboard is ready
+    -- open dashboard after closing lazy
     if vim.o.filetype == "lazy" then
-      vim.cmd.close()
-      vim.api.nvim_create_autocmd("User", {
-        pattern = "DashboardLoaded",
+      vim.api.nvim_create_autocmd("WinClosed", {
+        pattern = tostring(vim.api.nvim_get_current_win()),
+        once = true,
         callback = function()
-          require("lazy").show()
+          vim.schedule(function()
+            vim.api.nvim_exec_autocmds("UIEnter", { group = "dashboard" })
+          end)
         end,
       })
     end
