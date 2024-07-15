@@ -6,6 +6,9 @@ This repo contains the configuration files for my macOS environment.
 
 **Read through the configs and understand what is going on before applying them for yourself**
 
+*Screenshot showcasing the setup with editor and browser with window tiling*
+![screenshot](./screenshot.png)
+
 ## Features
 
 The setup aims to remove as much friction as possible from using and navigating
@@ -21,8 +24,6 @@ animations. I've also noticed that even though I used to like smooth scrolling,
 I have it disabled now whenever possible to make the system feel as responsive
 as possible.
 
-![screenshot](./screenshot.png)
-
 ### UI / Window management / Navigation
 
 Yabai is used for window management and window tiling. System Identity Protection has to be disabled for all Yabai features to work, refer to Yabai documentation when doing the installation.
@@ -30,6 +31,8 @@ Yabai is used for window management and window tiling. System Identity Protectio
 Moving between spaces happens easily with `CTRL + <workspace index>`.
 
 Changing focus between different windows or applications in workspace: `CTRL + DOWN`
+
+*Also, I have rebound my `CAPSLOCK` to `CTRL` for slightly more ergonomic hand position when using the laptop internal keyboard.*
 
 I have assigned some applications to specific workspaces, for example:
 
