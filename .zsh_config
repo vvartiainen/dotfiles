@@ -58,8 +58,6 @@ alias lt='lsd --tree'
 alias vi="nvim"
 alias vim="nvim"
 
-alias npm="pnpm"
-
 alias tmls="tmux ls"
 alias tma="tmux attach -t"
 
