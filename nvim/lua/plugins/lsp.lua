@@ -13,20 +13,12 @@ return {
     inlay_hints = { enabled = false },
 
     servers = {
-      tsserver = {
-        on_attach = function(client)
-          -- biome/prettier is used for formatting, conform.lua
-          client.server_capabilities.documentFormattingProvider = false
-        end,
-      },
       biome = {},
       bashls = {},
       svelte = {},
       sourcekit = {},
       gopls = {},
-      eslint = {
-        autostart = false,
-      },
+      eslint = {},
       tailwindcss = {},
       terraformls = {},
       sqlls = {},

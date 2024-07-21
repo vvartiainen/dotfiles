@@ -3,7 +3,7 @@ return {
   opts = {
     window = {
       position = "right",
-      width = 30,
+      width = 50,
       relative = "win",
       row = 0,
       col = 0,
