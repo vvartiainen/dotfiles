@@ -11,7 +11,6 @@ return {
   },
   opts = {
     inlay_hints = { enabled = false },
-
     servers = {
       biome = {},
       bashls = {},
@@ -21,7 +20,6 @@ return {
       eslint = {},
       tailwindcss = {},
       terraformls = {},
-      sqlls = {},
       marksman = {},
     },
   },
