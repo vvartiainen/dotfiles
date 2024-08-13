@@ -23,6 +23,9 @@ conflictstyle = diff3
 [diff]
 colorMoved = default
 
+[pull]
+rebase = true
+
 [filter.lfs]
 clean=git-lfs clean -- %f
 smudge=git-lfs smudge -- %f
