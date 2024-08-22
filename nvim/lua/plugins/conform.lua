@@ -36,7 +36,7 @@ return {
       scss = { "prettier" },
       sh = { "shfmt", "shellcheck" },
       shell = { "shfmt", "shellcheck" },
-      sql = { "pg_format", "sqlfluff" },
+      sql = { "sqlfluff" },
       svelte = { "prettier", "rustywind" },
       terraform = { "terraform_fmt" },
       tf = { "terraform_fmt" },

@@ -1,2 +1,4 @@
 [sqlfluff]
-dialect = sqlite
+dialect = ansi
+
+max_line_length = -1
