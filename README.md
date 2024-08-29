@@ -51,11 +51,13 @@ to show the workspaces there.
 
 **catppuccin mocha** is the colorscheme I try to use everywhere.
 
-### Editor
+### Editor & tools
 
 **Neovim** with **LazyVim** and a bunch of plugins and custom configuration is used for code editing and note taking.
 
 **Lazygit** is fantastic and integrates nicely with Neovim. I never really liked Git UIs but after trying and learning Lazygit there's no going back. I'd still recommend to learn Git on the command line before starting to use this tool.
+
+**yazi** is a great file management tool in terminal, it has nice integrations with fzf, zoxide and rg and it's using Vim keybindings.
 
 ### Terminal
 
@@ -83,7 +85,7 @@ Some small CLI tools to highlight:
 - `btop` a beautiful replacement for top
 - `atuin` for shell history
 - `asdf` to manage runtime versions of programming languages
-- `nnn` for file management
+- `yazi` for file management
 - `ripgrep` and `fd` to replace grep and find
 
 ## Installation
