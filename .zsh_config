@@ -66,10 +66,10 @@ alias falias="alias | fzf"
 alias fhistory="history | fzf"
 alias fbinds="bindkey | fzf"
 
-alias reloadyabai="sudo yabai --load-sa"
+alias reloadyabai="sudo yabai --load-sa && yabai --restart-service"
 alias reloadsketchybar="sketchybar --reload"
 alias reloadskhd="skhd --restart-service"
-alias reloadall="yabai --restart-service ; skhd --restart-service ; sketchybar --reload"
+alias reloadall="sudo yabai --load-sa ; yabai --restart-service ; skhd --restart-service ; sketchybar --reload"
 
 eval "$(thefuck --alias)"
 eval "$(zoxide init zsh)"
