@@ -1,5 +1,8 @@
 #!/bin/bash
 
+bindkey "^F" forward-word
+bindkey "^B" backward-word
+
 export XDG_CONFIG_HOME="$HOME/.config"
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=100000
