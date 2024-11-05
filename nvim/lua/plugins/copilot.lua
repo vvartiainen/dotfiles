@@ -19,8 +19,6 @@ return {
     },
   },
   config = function()
-    require("copilot").setup({})
-    -- Disable by default
-    require("copilot.command").disable()
+    -- Manually setup and loaded via keymaps.lua
   end,
 }

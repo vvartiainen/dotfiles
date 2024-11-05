@@ -17,7 +17,10 @@ vim.api.nvim_set_keymap("n", "ö", "[", {})
 vim.api.nvim_set_keymap("n", "å", "{", {})
 vim.api.nvim_set_keymap("n", "¨", "}", {})
 
--- copilot enable & disable
+-- copilot setup, enable & disable
+vim.keymap.set("n", "<leader>cos", function()
+  require("copilot").setup({})
+end, { noremap = true, silent = true, desc = "Copilot setup" })
 vim.api.nvim_set_keymap("n", "<leader>coe", ":Copilot enable<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>cod", ":Copilot disable<CR>", { noremap = true, silent = true })
 
