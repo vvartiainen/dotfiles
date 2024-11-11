@@ -26,9 +26,9 @@ vim.api.nvim_set_keymap("n", "<leader>cod", ":Copilot disable<CR>", { noremap = 
 
 -- floating terminal toggle
 vim.keymap.set("n", "<C-t>", function()
-  LazyVim.terminal()
+  Snacks.terminal()
 end, { desc = "Terminal (cwd)" })
 
 vim.keymap.set("t", "<C-t>", function()
-  LazyVim.terminal()
+  Snacks.terminal()
 end, { desc = "Terminal (cwd)" })
