@@ -13,10 +13,6 @@ vim.api.nvim_set_keymap("v", "€", "$", { silent = true, desc = "End of line" }
 vim.api.nvim_set_keymap("n", "ä", "]", {})
 vim.api.nvim_set_keymap("n", "ö", "[", {})
 
--- map å and ¨ to curly braces
-vim.api.nvim_set_keymap("n", "å", "{", {})
-vim.api.nvim_set_keymap("n", "¨", "}", {})
-
 -- copilot setup, enable & disable
 vim.keymap.set("n", "<leader>cos", function()
   require("copilot").setup({})

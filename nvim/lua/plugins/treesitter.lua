@@ -25,10 +25,10 @@ return {
       "yaml",
       "zig",
     },
-    highlight = {
+    indent = {
       enable = true,
     },
-    indent = {
+    highlight = {
       enable = true,
     },
   },

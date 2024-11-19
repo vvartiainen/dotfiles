@@ -9,7 +9,6 @@ return {
       "biome",
       "black",
       "codelldb",
-      "eslint-lsp",
       "golangci-lint",
       "golangci-lint-langserver",
       "gopls",
