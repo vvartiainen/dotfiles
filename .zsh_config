@@ -45,9 +45,8 @@ if [[ $(uname) == "Darwin" ]]; then
   # source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
   source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
-  # export BROWSER="arc"
-
   export PATH="$HOME/prog/zig-macos-arm64:$PATH"
+# export PATH="$HOME/prog/nvim-macos-arm64/bin:$PATH"
 fi
 
 alias rm="rm -i"
@@ -68,6 +67,8 @@ alias falias="alias | fzf"
 alias fhistory="history | fzf"
 alias fbinds="bindkey | fzf"
 
+alias vimode="bindkey -v"
+
 alias reloadyabai="sudo yabai --load-sa && yabai --restart-service"
 alias reloadsketchybar="sketchybar --reload"
 alias reloadskhd="skhd --restart-service"
@@ -78,7 +79,6 @@ eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 eval "$(fzf --zsh)"
 
-export PATH="$HOME/prog/nvim-macos-arm64/bin:$PATH"
 function yy() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
   yazi "$@" --cwd-file="$tmp"
