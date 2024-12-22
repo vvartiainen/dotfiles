@@ -45,7 +45,7 @@ if [[ $(uname) == "Darwin" ]]; then
   # source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
   source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
-  export BROWSER="arc"
+  # export BROWSER="arc"
 
   export PATH="$HOME/prog/zig-macos-arm64:$PATH"
 fi
