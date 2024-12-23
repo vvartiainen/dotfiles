@@ -1,6 +1,6 @@
 local function biome_lsp_or_prettier()
+  local root_dir = require("lspconfig").util.root_pattern("package.json")(vim.fn.getcwd())
   local has_prettier = vim.fs.find({
-    -- https://prettier.io/docs/en/configuration.html
     ".prettierrc",
     ".prettierrc.json",
     ".prettierrc.yml",
@@ -11,7 +11,7 @@ local function biome_lsp_or_prettier()
     ".prettierrc.toml",
     "prettier.config.js",
     "prettier.config.cjs",
-  }, { upward = true })[1]
+  }, { path = root_dir, stop = root_dir, upward = true })[1]
   if has_prettier then
     return { "prettier" }
   end
@@ -37,7 +37,7 @@ return {
       sh = { "shfmt", "shellcheck" },
       shell = { "shfmt", "shellcheck" },
       sql = { "sqlfluff" },
-      svelte = { "prettier", "rustywind" },
+      svelte = vim.list_extend(biome_lsp_or_prettier(), { "rustywind" }),
       terraform = { "terraform_fmt" },
       tf = { "terraform_fmt" },
       tfvars = { "terraform_fmt" },
