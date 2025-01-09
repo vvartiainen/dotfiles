@@ -14,11 +14,11 @@ vim.api.nvim_set_keymap("n", "ä", "]", {})
 vim.api.nvim_set_keymap("n", "ö", "[", {})
 
 -- copilot setup, enable & disable
-vim.keymap.set("n", "<leader>cos", function()
+vim.keymap.set("n", "<leader>Cps", function()
   require("copilot").setup({})
-end, { noremap = true, silent = true, desc = "Copilot setup" })
-vim.api.nvim_set_keymap("n", "<leader>coe", ":Copilot enable<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>cod", ":Copilot disable<CR>", { noremap = true, silent = true })
+end, { desc = "Copilot setup" })
+vim.api.nvim_set_keymap("n", "<leader>Cpe", ":Copilot enable<CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>Cpd", ":Copilot disable<CR>", {})
 
 -- floating terminal toggle
 vim.keymap.set("n", "<C-t>", function()
