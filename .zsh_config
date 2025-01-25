@@ -2,6 +2,7 @@
 
 bindkey "^F" forward-word
 bindkey "^B" backward-word
+bindkey "^D" kill-word
 
 export XDG_CONFIG_HOME="$HOME/.config"
 HISTFILE="$HOME/.zsh_history"
