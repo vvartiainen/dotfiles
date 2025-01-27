@@ -6,6 +6,7 @@ git:
 os:
   editPreset: "nvim"
 gui:
+  switchTabsWithPanelJumpKeys: true
   theme:
     activeBorderColor:
       - "#fab387"
