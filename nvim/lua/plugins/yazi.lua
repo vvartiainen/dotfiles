@@ -8,6 +8,11 @@ return {
       "<cmd>Yazi<cr>",
       desc = "Open yazi at the current file",
     },
+    {
+      "_",
+      "<cmd>Yazi cwd<cr>",
+      desc = "Open yazi at the  cwd",
+    },
   },
   ---@type YaziConfig
   opts = {
