@@ -11,6 +11,11 @@ return {
     },
     keymap = {
       preset = "default",
+      ["<C-e>"] = {
+        function(cmp)
+          cmp.show({ providers = { "snippets" } })
+        end,
+      },
     },
   },
 }
