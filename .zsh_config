@@ -14,6 +14,7 @@ export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 export ZSH_THEME="robbyrussell"
 plugins=(kitty fast-syntax-highlighting aws git asdf terraform npm golang poetry)
 zstyle ':omz:update' mode reminder
+
 # homebrew completions
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
@@ -50,6 +51,8 @@ fi
 alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
+
+alias rg="rg --hyperlink-format=kitty"
 
 alias la="lsd -la"
 alias lt='lsd --tree'
