@@ -34,13 +34,20 @@ ctrl + alt + cmd - j : yabai -m window --swap south
 ctrl + alt + cmd - k : yabai -m window --swap north
 ctrl + alt + cmd - l : yabai -m window --swap east
 
-# Toggle window sticky/float
-ctrl + alt - p : yabai -m window --toggle sticky
-ctrl + alt - o : yabai -m window --toggle float
+# Focus
+ctrl + alt - h : yabai -m window --focus west
+ctrl + alt - j : yabai -m window --focus south
+ctrl + alt - k : yabai -m window --focus north
+ctrl + alt - l : yabai -m window --focus east
 
 # Rotate and focus windows on screen
 ctrl - down : yabai -m window --focus next || yabai -m window --focus first
 ctrl + alt - down : yabai -m space --rotate 90
+
+# Toggle window sticky/float
+ctrl + alt - p : yabai -m window --toggle sticky
+ctrl + alt - o : yabai -m window --toggle float
+
 
 ctrl + alt  - return : yabai -m window --toggle zoom-fullscreen
 
