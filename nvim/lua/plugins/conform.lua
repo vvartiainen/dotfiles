@@ -37,7 +37,7 @@ return {
       sh = { "shfmt", "shellcheck" },
       shell = { "shfmt", "shellcheck" },
       sql = { "sqlfluff" },
-      svelte = vim.list_extend(biome_lsp_or_prettier(), { "rustywind" }),
+      svelte = { "prettier", "rustywind" },
       terraform = { "terraform_fmt" },
       tf = { "terraform_fmt" },
       tfvars = { "terraform_fmt" },
