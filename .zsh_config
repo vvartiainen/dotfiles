@@ -76,7 +76,12 @@ alias reloadskhd="skhd --restart-service"
 alias reloadall="sudo yabai --load-sa ; yabai --restart-service ; skhd --restart-service ; sketchybar --reload"
 
 eval "$(thefuck --alias)"
+
 eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+alias n="__zoside_z"
+alias zi="__zoxide_zi"
+
 eval "$(atuin init zsh)"
 eval "$(fzf --zsh)"
 
