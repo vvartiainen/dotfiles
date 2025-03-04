@@ -2,6 +2,18 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+local wk = require("which-key")
+wk.add({
+  -- Copilot enable manually by setup
+  { "<leader>C", function() end, icon = "", desc = "copilot" },
+  { "<leader>Cs", ":lua require('copilot').setup({})<CR>", icon = "", desc = "Setup Copilot" },
+  { "<leader>Ce", ":Copilot enable<CR>", icon = "", desc = "Enable Copilot" },
+  { "<leader>Cd", ":Copilot disable<CR>", icon = "", desc = "Disable Copilot" },
+
+  -- Show hidden
+  { "<leader><space>", LazyVim.pick("files", { hidden = true }), desc = "Find Files (Root Dir)" },
+})
+
 -- € to $ for easier access on Finnish layout
 vim.api.nvim_set_keymap("n", "€", "$", { silent = true, desc = "End of line" })
 vim.api.nvim_set_keymap("o", "€", "$", { silent = true, desc = "End of line" })
@@ -9,16 +21,9 @@ vim.api.nvim_set_keymap("x", "€", "$", { silent = true, desc = "End of line" }
 vim.api.nvim_set_keymap("s", "€", "$", { silent = true, desc = "End of line" })
 vim.api.nvim_set_keymap("v", "€", "$", { silent = true, desc = "End of line" })
 
--- map ö and ä to square brackets in all modes
+-- ä and ö for easier next function/method/etc navigation
 vim.api.nvim_set_keymap("n", "ä", "]", {})
 vim.api.nvim_set_keymap("n", "ö", "[", {})
-
--- copilot setup, enable & disable
-vim.keymap.set("n", "<leader>Cps", function()
-  require("copilot").setup({})
-end, { desc = "Copilot setup" })
-vim.api.nvim_set_keymap("n", "<leader>Cpe", ":Copilot enable<CR>", {})
-vim.api.nvim_set_keymap("n", "<leader>Cpd", ":Copilot disable<CR>", {})
 
 -- floating terminal toggle
 vim.keymap.set("n", "<C-t>", function()
