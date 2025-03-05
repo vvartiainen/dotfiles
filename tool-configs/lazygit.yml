@@ -2,7 +2,7 @@ git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never
-  autoFetch: false
+  autoFetch: true
 os:
   editPreset: "nvim"
 gui:
