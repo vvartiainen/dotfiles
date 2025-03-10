@@ -18,7 +18,6 @@ return {
       "python",
       "regex",
       "svelte",
-      "swift",
       "terraform",
       "tsx",
       "typescript",
