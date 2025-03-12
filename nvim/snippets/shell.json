@@ -1,4 +1,9 @@
 {
+  "shebang": {
+    "prefix": "sb",
+    "body": "#!/bin/bash\n\nset -eou pipefail",
+    "description": "Bash shebang"
+  },
   "curl": {
     "prefix": "cur",
     "body": "curl -s -X -H 'Content-Type: application/json' -d '{\"key\": \"value\"}' http://localhost:3000",
