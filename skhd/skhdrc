@@ -1,6 +1,4 @@
-# Toggle layout modes
-cmd - 9 : yabai -m space --layout bsp
-cmd - 0 : yabai -m space --layout float
+ctrl + alt + cmd - r : yabai --restart-service"
 
 # Space movement
 ctrl - 1 : yabai -m space --focus 1
