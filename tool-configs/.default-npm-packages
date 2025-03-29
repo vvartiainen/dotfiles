@@ -3,3 +3,4 @@ yarn
 neovim
 tree-sitter-cli
 typescript
+@mermaid-js/mermaid-cli
