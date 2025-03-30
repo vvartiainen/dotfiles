@@ -20,6 +20,7 @@ return {
       "marksman",
       "prettier",
       "prettierd",
+      "postgrestools",
       "quick-lint-js",
       "rustywind",
       "shellcheck",
