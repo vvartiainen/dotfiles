@@ -17,6 +17,13 @@ after-startup-command = []
 # Start AeroSpace at login
 start-at-login = true
 
+# Notify Sketchybar about workspace change
+exec-on-workspace-change = [
+  '/bin/bash',
+  '-c',
+  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+]
+
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
@@ -188,13 +195,6 @@ run = "move-node-to-workspace 3"
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
 run = "move-node-to-workspace 2"
-
-# Notify Sketchybar about workspace change
-exec-on-workspace-change = [
-  '/bin/bash',
-  '-c',
-  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
-]
 
 # The first matching pattern will be used
 [workspace-to-monitor-force-assignment]
