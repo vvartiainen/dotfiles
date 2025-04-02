@@ -103,6 +103,9 @@ alias lg="lazygit"
 
 alias vimode="bindkey -v"
 
+alias sshc="vi ~/.ssh/config"
+alias sshkh="vi ~/.ssh/known_hosts"
+
 alias reloadyabai="sudo yabai --load-sa && yabai --restart-service"
 alias reloadsketchybar="sketchybar --reload"
 alias reloadskhd="skhd --restart-service"

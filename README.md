@@ -100,3 +100,4 @@ Example installation script in `./install.sh`. Modify where needed.
 - tmux plugins can be updated with `~/.tmux/plugins/tpm/bin/update_plugins all`
 - `reloadall` & `reloadyabai` if something is stuck after reboot
 - Check that yabai requirements (SIP and nvram) stay as is after OS updates
+- Empty nvim cache: `rm -rf ~/.cache/nvim/luac`

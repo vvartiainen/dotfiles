@@ -39,6 +39,7 @@ ctrl + alt - k : yabai -m window --focus north
 ctrl + alt - l : yabai -m window --focus east
 
 # Rotate and focus windows on screen
+cmd - tab : yabai -m window --focus next || yabai -m window --focus first
 ctrl - down : yabai -m window --focus next || yabai -m window --focus first
 ctrl + alt - down : yabai -m space --rotate 90
 
