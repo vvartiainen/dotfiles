@@ -6,9 +6,9 @@ local wk = require("which-key")
 wk.add({
   -- Copilot enable manually by setup
   { "<leader>C", function() end, icon = "", desc = "copilot" },
-  { "<leader>Cs", ":lua require('copilot').setup({})<CR>", icon = "", desc = "Setup Copilot" },
-  { "<leader>Ce", ":Copilot enable<CR>", icon = "", desc = "Enable Copilot" },
-  { "<leader>Cd", ":Copilot disable<CR>", icon = "", desc = "Disable Copilot" },
+  { "<leader>Cs", "<cmd>lua require('copilot').setup({})<CR>", icon = "", desc = "Setup Copilot" },
+  { "<leader>Ce", "<cmd>Copilot enable<CR>", icon = "", desc = "Enable Copilot" },
+  { "<leader>Cd", "<cmd>Copilot disable<CR>", icon = "", desc = "Disable Copilot" },
 
   -- Show hidden
   { "<leader><space>", LazyVim.pick("files", { hidden = true }), desc = "Find Files (Root Dir)" },
@@ -29,7 +29,6 @@ vim.api.nvim_set_keymap("n", "ö", "[", {})
 vim.keymap.set("n", "<C-t>", function()
   Snacks.terminal()
 end, { desc = "Terminal (cwd)" })
-
 vim.keymap.set("t", "<C-t>", function()
   Snacks.terminal()
 end, { desc = "Terminal (cwd)" })
