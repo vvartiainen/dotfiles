@@ -18,7 +18,7 @@ return {
       tailwindcss = {},
       terraformls = {},
       marksman = {},
-      postgres_lsp = {},
+      -- postgres_lsp = {},
     },
   },
 }
