@@ -6,7 +6,9 @@ return {
   },
   opts = {
     adapters = {
-      ["neotest-vitest"] = {},
+      ["neotest-vitest"] = {
+        vitestCommand = "npx vitest",
+      },
       ["neotest-jest"] = {},
     },
   },
