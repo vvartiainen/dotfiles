@@ -1,8 +1,7 @@
 return {
-  { "mason-org/mason-lspconfig.nvim", version = "1.32.0" },
+  { "mason-org/mason-lspconfig.nvim" },
   {
     "williamboman/mason.nvim",
-    version = "1.11.0",
     cmd = "Mason",
     keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
     build = ":MasonUpdate",
