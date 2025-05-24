@@ -11,7 +11,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 brew install zsh-autosuggestions
 brew install zsh-autocomplete
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
-	"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/plugins/fast-syntax-highlighting
+  "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/plugins/fast-syntax-highlighting
 
 # Tmux & plugin manager installation
 brew install tmux
@@ -55,6 +55,7 @@ brew install delve # golang debug
 brew install scc
 brew install git-delta
 brew install atuin
+brew install libpq
 
 brew install zig
 

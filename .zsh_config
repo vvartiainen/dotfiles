@@ -40,6 +40,9 @@ source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 # docker
 # export DOCKER_HOST=unix://$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
 
+# libpq
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
 # asdf
 export ASDF_DATA_DIR="$HOME/.asdf"
 export PATH="$ASDF_DATA_DIR/shims:$PATH"
@@ -110,3 +113,7 @@ alias reloadyabai="sudo yabai --load-sa && yabai --restart-service"
 alias reloadsketchybar="sketchybar --reload"
 alias reloadskhd="skhd --restart-service"
 alias reloadall="sudo yabai --load-sa ; yabai --restart-service ; skhd --restart-service ; sketchybar --reload"
+
+# Load and create init-dev-files function
+source "$HOME/prog/dotfiles/tool-configs/init-dev-files.sh"
+alias initdev="init_dev_files"

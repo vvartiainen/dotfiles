@@ -1,26 +1,26 @@
 "$schema" = 'https://raw.githubusercontent.com/yazi-rs/schemas/refs/heads/main/schemas/keymap.json'
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 run = 'shell -- ya emit cd "$(git rev-parse --show-toplevel)"'
 on = ["g", "r"]
 description = "Go to git root"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["<C-f>"]
 run = "seek 5"
 desc = "Scroll preview down"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["<C-b>"]
 run = "seek -5"
 desc = "Scroll preview up"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["<C-n>"]
 run = "arrow 1"
 desc = "Scroll preview down"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["<C-p>"]
 run = "arrow -1"
 desc = "Scroll preview up"
