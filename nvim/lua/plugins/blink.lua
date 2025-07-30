@@ -37,6 +37,9 @@ end
 return {
   "saghen/blink.cmp",
   opts = {
+    enabled = function()
+      return not vim.tbl_contains({ "copilot-chat" }, vim.bo.filetype)
+    end,
     completion = {
       list = {
         selection = {
