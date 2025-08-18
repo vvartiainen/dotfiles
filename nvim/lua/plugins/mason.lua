@@ -23,7 +23,6 @@ return {
         "prettier",
         "prettierd",
         -- "postgrestools",
-        "quick-lint-js",
         "rustywind",
         "shellcheck",
         "shfmt",
