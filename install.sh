@@ -32,6 +32,7 @@ brew install gnu-sed
 brew install luajit
 brew install stylua
 brew install tree-sitter
+brew install tree-sitter-cli
 brew install wget
 brew install luarocks
 brew install pgformatter
