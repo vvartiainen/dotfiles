@@ -6,7 +6,7 @@ return {
       zsh = { "zsh", "shellcheck" },
       sh = { "shellcheck" },
       shell = { "shellcheck" },
-      sql = { "sqlfluff" },
+      -- sql = { "sqlfluff" },
       -- markdown = { "markdownlint" },
       -- javascript = {  "eslint" },
       -- typescript = {  "eslint" },

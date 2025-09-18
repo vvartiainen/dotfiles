@@ -57,6 +57,7 @@ brew install scc
 brew install git-delta
 brew install atuin
 brew install libpq
+brew install sqlfluff
 
 brew install zig
 
