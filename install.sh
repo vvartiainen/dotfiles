@@ -58,6 +58,7 @@ brew install git-delta
 brew install atuin
 brew install libpq
 brew install sqlfluff
+brew install gnumeric
 
 brew install zig
 
