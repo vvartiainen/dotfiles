@@ -22,7 +22,7 @@ return {
         "marksman",
         "prettier",
         "prettierd",
-        "postgrestools",
+        "postgres-language-server",
         "sqlfluff",
         "rustywind",
         "shellcheck",
