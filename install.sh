@@ -5,76 +5,32 @@ mkdir -p ~/prog/dotfiles
 
 git clone https://github.com/vvartiainen/.config ~/prog/dotfiles
 
+brew bundle ~/prog/dotfiles
+
 # oh-my-zsh install
-brew install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-brew install zsh-autosuggestions
-brew install zsh-autocomplete
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
   "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/plugins/fast-syntax-highlighting
 
+# Devtools
+xcode-select --install
+sudo /usr/sbin/DevToolsSecurity -enable
+
+# npm & python installs
+python3 -m pip install --user --upgrade pynvim
+npm install -g tree-sitter-cli
+npm install -g neovim
+
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.16/sketchybar-app-font.ttf -o "$HOME"/Library/Fonts/sketchybar-app-font.ttf
+brew services start sketchybar
+
 # Tmux & plugin manager installation
-brew install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/bin/install_plugins
 
-brew install arc
-brew install kitty
-brew install wezterm
-brew install raycast
-
-brew install ripgrep
-brew install fd
-brew install lazygit
-brew install lsd
-brew install cmake
-brew install gnu-sed
-brew install luajit
-brew install stylua
-brew install tree-sitter
-brew install tree-sitter-cli
-brew install wget
-brew install luarocks
-brew install pgformatter
-brew install hadolint
-brew install composer
-brew install julia
-brew install fish
-brew install sqlite
-brew install fzf
-brew install jq
-brew install ffmpegthumbnailer unar poppler zoxide
-brew install btop
-brew install tldr
-brew install thefuck
-brew install mise
-brew install nvm
-brew install shellcheck
-brew install bat
-brew install neofetch
-brew install delve # golang debug
-brew install scc
-brew install git-delta
-brew install atuin
-brew install libpq
-brew install sqlfluff
-brew install gnumeric
-
-brew install zig
-
-# Window management, check yabai docs for more info about requirements
-brew install koekeishiya/formulae/yabai
-brew install koekeishiya/formulae/skhd
-
-# Nerdfont
-brew tap homebrew/cask-fonts
-brew install font-symbols-only-nerd-font
-brew install font-ubuntu-mono-nerd-font
-brew install font-jetbrains-mono-nerd-font
-
-cd ~/prog
-curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz
-tar -xvf nvim-macos-arm64.tar.gz
+# Installation for https://github.com/mikesmithgh/kitty-scrollback.nvim
+# nvim --headless +'KittyScrollbackGenerateKittens'
+# nvim +'KittyScrollbackCheckHealth'
 
 # Symlink dotfiles
 ln -s ~/prog/dotfiles/nvim ~/.config/nvim
@@ -96,31 +52,5 @@ ln -s ~/prog/dotfiles/yabai/yabairc ~/.config/yabai/yabairc
 
 ln -s ~/prog/dotfiles/sketchybar ~/.config/sketchybar
 
-# npm & python installs
-python3 -m pip install --user --upgrade pynvim
-npm install -g tree-sitter-cli
-npm install -g neovim
-
 # Add .zsh_config
 echo "source ~/prog/dotfiles/.zsh_config" >>~/.zshrc
-
-# Misc
-xcode-select --install
-sudo /usr/sbin/DevToolsSecurity -enable
-
-# Sketchybar
-brew tap FelixKratz/formulae
-brew install sketchybar
-
-curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.16/sketchybar-app-font.ttf -o "$HOME"/Library/Fonts/sketchybar-app-font.ttf
-
-brew tap homebrew/cask-fonts
-brew install font-hack-nerd-font
-brew install font-sf-pro
-brew install --cask sf-symbols
-
-brew services start sketchybar
-
-# Installation for https://github.com/mikesmithgh/kitty-scrollback.nvim
-# nvim --headless +'KittyScrollbackGenerateKittens'
-# nvim +'KittyScrollbackCheckHealth'
