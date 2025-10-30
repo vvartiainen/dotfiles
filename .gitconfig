@@ -1,33 +1,45 @@
 [user]
-name=Ville Vartiainen
-email=vvarti@gmail.com
+  name=Ville Vartiainen
+  email=vvarti@gmail.com
+
+[credential]
+  helper=osxkeychain
 
 [init]
-defaultbranch=main
+  defaultbranch=main
 
 [color]
-ui=auto
+  ui=auto
 
 [core]
-pager=delta
+  editor=nvim
+  pager=delta
+  excludeFiles="~/.gitignore_global"
+  autocrlf=false
+
+[diff]
+  algorithm=histogram
 
 [interactive]
-diffFilter=delta --color-only
+  diffFilter=delta --color-only
 
 [delta]
-navigate=true    # use n and N to move between diff sections
+  navigate=true    # use n and N to move between diff sections
 
 [merge]
-conflictstyle=zdiff3
+  conflictstyle=zdiff3
 
 [push]
-autoSetupRemote=true
+  autoSetupRemote=true
 
 [pull]
-rebase=true
+  rebase=true
+
+[rebase]
+  autostash=true
 
 [filter.lfs]
-clean=git-lfs clean -- %f
-smudge=git-lfs smudge -- %f
-process=git-lfs filter-process
-required=true
+  clean=git-lfs clean -- %f
+  smudge=git-lfs smudge -- %f
+  process=git-lfs filter-process
+  required=true
