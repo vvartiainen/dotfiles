@@ -76,6 +76,7 @@ kind of sessions in the background.
 Some small CLI tools to highlight:
 
 - `brew` as a package manager
+- `mise` to manage runtime versions of programming languages
 - `oh-my-zsh` and various plugins it comes with (auto complete and syntax highlighting are the most important ones)
 - `zoxide` to navigate between directories I've visited before
 - `fzf` for fuzzy finding shell history, aliases, keybinds, ls output etc.
@@ -84,7 +85,6 @@ Some small CLI tools to highlight:
 - `bat` - cat but with syntax highlighting
 - `btop` a beautiful replacement for top
 - `atuin` for shell history
-- `asdf` to manage runtime versions of programming languages
 - `yazi` for file management
 - `ripgrep` and `fd` to replace grep and find
 

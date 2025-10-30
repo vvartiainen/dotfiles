@@ -1,0 +1,4 @@
+[tools]
+java = "latest"
+node = "22"
+terraform = "latest"

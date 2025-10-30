@@ -47,7 +47,7 @@ brew install ffmpegthumbnailer unar poppler zoxide
 brew install btop
 brew install tldr
 brew install thefuck
-brew install asdf
+brew install mise
 brew install nvm
 brew install shellcheck
 brew install bat
@@ -95,14 +95,6 @@ ln -s ~/prog/dotfiles/skhd/skhdrc ~/.config/skhd/skhdrc
 ln -s ~/prog/dotfiles/yabai/yabairc ~/.config/yabai/yabairc
 
 ln -s ~/prog/dotfiles/sketchybar ~/.config/sketchybar
-
-# asdf
-ln -s ~/prog/dotfiles/tool-versions ~/.tool-versions
-asdf plugin add nodejs
-asdf plugin add terraform
-asdf plugin add java
-asdf plugin add python
-asdf install
 
 # npm & python installs
 python3 -m pip install --user --upgrade pynvim

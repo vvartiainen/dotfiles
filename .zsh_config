@@ -22,7 +22,6 @@ plugins=(
   fast-syntax-highlighting
   aws
   git
-  asdf
   terraform
   npm
   golang
@@ -31,7 +30,7 @@ plugins=(
   docker
   docker-compose
   rsync
-  # yarn # This overrides yazi's yy...
+  mise
 )
 zstyle ':omz:update' mode reminder
 source "$ZSH"/oh-my-zsh.sh
@@ -42,11 +41,6 @@ source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # libpq
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-
-# asdf
-export ASDF_DATA_DIR="$HOME/.asdf"
-export PATH="$ASDF_DATA_DIR/shims:$PATH"
-fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 
 # Golang
 export GOPATH=$HOME/golang
@@ -71,6 +65,7 @@ eval "$(thefuck --alias)"
 eval "$(zoxide init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(atuin init zsh)"
+eval "$(mise activate zsh)"
 
 export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 eval "$(starship init zsh)"
