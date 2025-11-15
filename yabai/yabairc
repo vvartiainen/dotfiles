@@ -75,6 +75,6 @@ yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m sp
 # yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus recent || yabai -m window --focus first"
 # yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus recent || yabai -m window --focus first"
 
-yabai -m config layout bsp
+yabai -m config layout stack
 
 yabai -m rule --apply
