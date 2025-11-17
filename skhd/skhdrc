@@ -3,6 +3,9 @@ ctrl + alt + cmd - t : kitten quick-access-terminal
 
 ctrl + alt  - return : yabai -m window --toggle zoom-fullscreen
 
+ctrl + alt + cmd - b : yabai -m space --layout bsp
+ctrl + alt + cmd - s : yabai -m space --layout stack
+
 ctrl + alt + cmd - f : yabai -m query --windows --space | jq '.[].id' | xargs -I{} yabai -m window {} --toggle zoom-fullscreen
 
 # Space movement
@@ -51,7 +54,7 @@ cmd - tab : yabai -m window --focus stack.next || yabai -m window --focus stack.
 alt - p : yabai -m window --focus stack.prev || yabai -m window --focus prev || yabai -m window --focus last
 alt - n : yabai -m window --focus stack.next || yabai -m window --focus next || yabai -m window --focus first
 
-ctrl - down : yabai -m window --focus next || yabai -m window --focus first
+ctrl - down : yabai -m window --focus stack.next || yabai -m window --focus stack.prev || yabai -m window --focus next || yabai -m window --focus first
 ctrl + alt - down : yabai -m space --rotate 90
 
 # Resize
