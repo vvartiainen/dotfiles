@@ -6,6 +6,11 @@ on = ["g", "r"]
 description = "Go to git root"
 
 [[mgr.prepend_keymap]]
+run = 'help'
+on = ["g", "?"]
+description = "Go to git root"
+
+[[mgr.prepend_keymap]]
 on = ["<C-f>"]
 run = "seek 5"
 desc = "Scroll preview down"
